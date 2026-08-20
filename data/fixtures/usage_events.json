@@ -1,0 +1,5292 @@
+[
+  {
+    "customer_id": "cust_001",
+    "event_type": "login",
+    "endpoint": "/v1/users/invite",
+    "user_email": "linh@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-15T14:24:15Z",
+    "metadata": {
+      "duration_ms": 1703,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "wei@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-14T23:33:41Z",
+    "metadata": {
+      "duration_ms": 1737,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_006",
+    "event_type": "export",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "mike@pinebridge.co",
+    "plan": "free",
+    "occurred_at": "2026-07-23T17:47:59Z",
+    "metadata": {
+      "duration_ms": 2769,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "login",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "emma@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-13T23:17:04Z",
+    "metadata": {
+      "duration_ms": 1040,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "mike@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-25T09:46:49Z",
+    "metadata": {
+      "duration_ms": 1810,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "login",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "carlos@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-09T16:33:27Z",
+    "metadata": {
+      "duration_ms": 3786,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "export",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "noah@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-20T21:24:05Z",
+    "metadata": {
+      "duration_ms": 3925,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "jane@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-21T17:15:39Z",
+    "metadata": {
+      "duration_ms": 1198,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/users/invite",
+    "user_email": "tom@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-04T21:45:33Z",
+    "metadata": {
+      "duration_ms": 560,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "tom@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-22T11:11:42Z",
+    "metadata": {
+      "duration_ms": 2587,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "wei@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-14T16:49:57Z",
+    "metadata": {
+      "duration_ms": 3366,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_002",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "linh@brightlabs.io",
+    "plan": "pro",
+    "occurred_at": "07/14/2026 6:32pm",
+    "metadata": {
+      "duration_ms": 1544,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "api_call",
+    "endpoint": "/v1/data/query",
+    "user_email": "linh@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-17T15:18:04Z",
+    "metadata": {
+      "duration_ms": 2661,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "alex@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-21T12:55:49Z",
+    "metadata": {
+      "duration_ms": 623,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/export",
+    "user_email": "priya@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-12T21:27:20Z",
+    "metadata": {
+      "duration_ms": 1650,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_002",
+    "event_type": "login",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "noah@brightlabs.io",
+    "plan": "pro",
+    "occurred_at": "2026-07-17T20:17:59Z",
+    "metadata": {
+      "duration_ms": 2434,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/export",
+    "user_email": "sara@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-31T17:29:13Z",
+    "metadata": {
+      "duration_ms": 1318,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "login",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "carlos@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-16T06:20:59Z",
+    "metadata": {
+      "duration_ms": 918,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_002",
+    "event_type": "export",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "emma@brightlabs.io",
+    "plan": "pro",
+    "occurred_at": "2026-07-08T04:12:52Z",
+    "metadata": {
+      "duration_ms": 3903,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "export",
+    "endpoint": "/v1/reports/export",
+    "user_email": "priya@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-11T09:41:08Z",
+    "metadata": {
+      "duration_ms": 824,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "wei@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-06T20:52:56Z",
+    "metadata": {
+      "duration_ms": 1348,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_009",
+    "event_type": "sync",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "tom@driftpoint.io",
+    "plan": "free",
+    "occurred_at": "2026-07-08T01:34:23Z",
+    "metadata": {
+      "duration_ms": 141,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "report_generated",
+    "endpoint": "/v1/users/invite",
+    "user_email": "tom@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-23T05:47:43Z",
+    "metadata": {
+      "duration_ms": 3779,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "login",
+    "endpoint": "/v1/users/invite",
+    "user_email": "alex@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-12T16:35:51Z",
+    "metadata": {
+      "duration_ms": 1538,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "report_generated",
+    "endpoint": "/v1/users/invite",
+    "user_email": "carlos@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-14T01:53:56Z",
+    "metadata": {
+      "duration_ms": 806,
+      "status": "success"
+    }
+  },
+  {
+    "event_type": "export",
+    "endpoint": "/v1/data/query",
+    "user_email": "noah@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-29T13:22:20Z",
+    "metadata": {
+      "duration_ms": 367,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "sync",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "emma@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-25T15:10:23Z",
+    "metadata": {
+      "duration_ms": 1959,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "linh@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-15T08:19:25Z",
+    "metadata": {
+      "duration_ms": 490,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "noah@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-27T22:25:58Z",
+    "metadata": {
+      "duration_ms": 3178,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_011",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "emma@stackframe.dev",
+    "plan": "free",
+    "occurred_at": "2026-07-05T02:52:20Z",
+    "metadata": {
+      "duration_ms": 675,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/export",
+    "user_email": "emma@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-20T14:35:11Z",
+    "metadata": {
+      "duration_ms": 2645,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "report_generated",
+    "endpoint": "/v1/users/invite",
+    "user_email": "priya@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-04T14:13:14Z",
+    "metadata": {
+      "duration_ms": 1425,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "login",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "linh@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-14T00:27:05Z",
+    "metadata": {
+      "duration_ms": 38,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "api_call",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "priya@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-07T19:34:53Z",
+    "metadata": {
+      "duration_ms": 3815,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "linh@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-20T19:41:56Z",
+    "metadata": {
+      "duration_ms": 1739,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "noah@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-06T16:22:32Z",
+    "metadata": {
+      "duration_ms": 3806,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_006",
+    "event_type": "login",
+    "endpoint": "/v1/users/invite",
+    "user_email": "carlos@pinebridge.co",
+    "plan": "free",
+    "occurred_at": "2026-07-10T08:16:49Z",
+    "metadata": {
+      "duration_ms": 193,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_009",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "mike@driftpoint.io",
+    "plan": "free",
+    "occurred_at": "2026-07-07T02:14:56Z",
+    "metadata": {
+      "duration_ms": 1469,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/users/invite",
+    "user_email": "carlos@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-26T07:47:07Z",
+    "metadata": {
+      "duration_ms": 1829,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_009",
+    "event_type": "export",
+    "endpoint": "/v1/reports/export",
+    "user_email": "sara@driftpoint.io",
+    "plan": "free",
+    "occurred_at": "2026-07-04T05:08:58Z",
+    "metadata": {
+      "duration_ms": 377,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "export",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "sara@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-13T05:27:03Z",
+    "metadata": {
+      "duration_ms": 1587,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "report_generated",
+    "endpoint": "/v1/data/query",
+    "user_email": "emma@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-16T13:47:05Z",
+    "metadata": {
+      "duration_ms": 612,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "sync",
+    "endpoint": "/v1/data/query",
+    "user_email": "mike@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-09T22:42:30Z",
+    "metadata": {
+      "duration_ms": 474,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_002",
+    "event_type": "export",
+    "endpoint": "/v1/data/query",
+    "user_email": "mike@brightlabs.io",
+    "plan": "pro",
+    "occurred_at": "2026-07-15T12:43:17Z",
+    "metadata": {
+      "duration_ms": 3387,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "login",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "wei@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-09T18:06:22Z",
+    "metadata": {
+      "duration_ms": 2757,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "mike@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-03T11:25:11Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "noah@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-08T23:06:45Z",
+    "metadata": {
+      "duration_ms": 2907,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "linh@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-06T08:48:43Z",
+    "metadata": {
+      "duration_ms": 2545,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mike@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-14T02:59:02Z",
+    "metadata": {
+      "duration_ms": 1808,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "alex@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-27T18:30:05Z",
+    "metadata": {
+      "duration_ms": 2506,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "login",
+    "endpoint": "/v1/users/invite",
+    "user_email": "alex@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-14T21:13:43Z",
+    "metadata": {
+      "duration_ms": 1601,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "mike@quokkasoft.com",
+    "plan": "pro",
+    "metadata": {
+      "duration_ms": 1912,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "report_generated",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "sara@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-16T23:43:49Z",
+    "metadata": {
+      "duration_ms": 683,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "alex@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-27T20:52:39Z",
+    "metadata": {
+      "duration_ms": 2089,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/export",
+    "user_email": "mike@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-20T10:06:12Z",
+    "metadata": {
+      "duration_ms": 2452,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "alex@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-25T03:11:22Z",
+    "metadata": {
+      "duration_ms": 885,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "noah@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-03T10:10:28Z",
+    "metadata": {
+      "duration_ms": 285,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "login",
+    "endpoint": "/v1/data/query",
+    "user_email": "dan@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-17T03:19:56Z",
+    "metadata": {
+      "duration_ms": 256,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "mike@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-07T13:12:00Z",
+    "metadata": {
+      "duration_ms": 3208,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "sync",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mike@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-09T09:02:59Z",
+    "metadata": {
+      "duration_ms": 2076,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "tom@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T00:13:45Z",
+    "metadata": {
+      "duration_ms": 3255,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "carlos@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T08:41:47Z",
+    "metadata": {
+      "duration_ms": 3978,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/export",
+    "user_email": "emma@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-24T23:06:01Z",
+    "metadata": {
+      "duration_ms": 2327,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "noah@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-26T14:56:49Z",
+    "metadata": {
+      "duration_ms": 608,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "jane@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-26T22:09:35Z",
+    "metadata": {
+      "duration_ms": 3242,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "api_call",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "priya@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-08T03:06:42Z",
+    "metadata": {
+      "duration_ms": 1877,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "noah@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T21:05:04Z",
+    "metadata": {
+      "duration_ms": 593,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "dan@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T15:18:59Z",
+    "metadata": {
+      "duration_ms": 2923,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "login",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "noah@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-27T16:21:17Z",
+    "metadata": {
+      "duration_ms": 3960,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/export",
+    "user_email": "sara@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-28T08:49:44Z",
+    "metadata": {
+      "duration_ms": 1146,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/data/query",
+    "user_email": "alex@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-17T13:38:16Z",
+    "metadata": {
+      "duration_ms": 3941,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/export",
+    "user_email": "jane@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-14T18:42:51Z",
+    "metadata": {
+      "duration_ms": 657,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "jane@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-25T23:01:59Z",
+    "metadata": {
+      "duration_ms": 1865,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "emma@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-05T23:12:49Z",
+    "metadata": {
+      "duration_ms": 3905,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "login",
+    "endpoint": "/v1/users/invite",
+    "user_email": "alex@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-11T05:49:21Z",
+    "metadata": {
+      "duration_ms": 47,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "report_generated",
+    "endpoint": "/v1/data/query",
+    "user_email": "dan@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-14T02:53:31Z",
+    "metadata": {
+      "duration_ms": 2545,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "export",
+    "endpoint": "/v1/reports/export",
+    "user_email": "mike@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T13:46:45Z",
+    "metadata": {
+      "duration_ms": 3060,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "alex@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-14T07:54:00Z",
+    "metadata": {
+      "duration_ms": 1216,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_009",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "noah@driftpoint.io",
+    "plan": "free",
+    "occurred_at": "2026-07-22T01:19:19Z",
+    "metadata": {
+      "duration_ms": 321,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "export",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "mike@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-21T02:01:25Z",
+    "metadata": {
+      "duration_ms": 592,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "export",
+    "endpoint": "/v1/data/query",
+    "user_email": "mike@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-10T08:11:31Z",
+    "metadata": {
+      "duration_ms": 2840,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/export",
+    "user_email": "sara@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-15T09:30:53Z",
+    "metadata": {
+      "duration_ms": 3513,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/data/query",
+    "user_email": "mike@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-10T15:00:54Z",
+    "metadata": {
+      "duration_ms": 1308,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/reports/export",
+    "user_email": "carlos@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-11T00:01:28Z",
+    "metadata": {
+      "duration_ms": 2840,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "linh@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-01T22:08:32Z",
+    "metadata": {
+      "duration_ms": 2543,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "alex@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-04T06:22:37Z",
+    "metadata": {
+      "duration_ms": 1908,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/data/query",
+    "user_email": "alex@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-29T18:38:47Z",
+    "metadata": {
+      "duration_ms": 847,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "alex@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-19T15:38:21Z",
+    "metadata": {
+      "duration_ms": 1859,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/export",
+    "user_email": "priya@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-21T03:10:56Z",
+    "metadata": {
+      "duration_ms": 363,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/users/invite",
+    "user_email": "linh@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-05T14:24:20Z",
+    "metadata": {
+      "duration_ms": 1134,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "dan@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-04T00:34:19Z",
+    "metadata": {
+      "duration_ms": 3938,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "mike@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-16T04:09:28Z",
+    "metadata": {
+      "duration_ms": 2368,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "wei@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-25T02:57:27Z",
+    "metadata": {
+      "duration_ms": 1579,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_003",
+    "event_type": "login",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "dan@northwind.com",
+    "plan": "free",
+    "occurred_at": "2026-07-24T23:16:20Z",
+    "metadata": {
+      "duration_ms": 1776,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_011",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "tom@stackframe.dev",
+    "plan": "free",
+    "occurred_at": "2026-07-14T15:25:07Z",
+    "metadata": {
+      "duration_ms": 2674,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "carlos@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-22T10:08:24Z",
+    "metadata": {
+      "duration_ms": 1452,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "mike@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-20T14:59:16Z",
+    "metadata": {
+      "duration_ms": 1829,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "emma@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-09T11:52:11Z",
+    "metadata": {
+      "duration_ms": 3091,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "export",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "noah@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-29T15:10:31Z",
+    "metadata": {
+      "duration_ms": 2866,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "sync",
+    "endpoint": "/v1/data/query",
+    "user_email": "priya@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-15T07:02:49Z",
+    "metadata": {
+      "duration_ms": 809,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "dan@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-12T00:38:42Z",
+    "metadata": {
+      "duration_ms": 904,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "login",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "noah@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-10T22:45:55Z",
+    "metadata": {
+      "duration_ms": 832,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "dan@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-26T18:23:05Z",
+    "metadata": {
+      "duration_ms": 1347,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "report_generated",
+    "endpoint": "/v1/users/invite",
+    "user_email": "emma@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-17T19:15:59Z",
+    "metadata": {
+      "duration_ms": 938,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "dan@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-19T12:51:56Z",
+    "metadata": {
+      "duration_ms": 2455,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/export",
+    "user_email": "noah@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-25T14:07:40Z",
+    "metadata": {
+      "duration_ms": 638,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "api_call",
+    "endpoint": "/v1/users/invite",
+    "user_email": "tom@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-08T05:27:07Z",
+    "metadata": {
+      "duration_ms": 2492,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "api_call",
+    "endpoint": "/v1/data/query",
+    "user_email": "sara@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-21T15:56:00Z",
+    "metadata": {
+      "duration_ms": 2167,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/data/query",
+    "user_email": "wei@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-09T06:48:24Z",
+    "metadata": {
+      "duration_ms": 488,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "mike@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-05T10:51:11Z",
+    "metadata": {
+      "duration_ms": 2652,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "login",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "wei@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-01T23:56:15Z",
+    "metadata": {
+      "duration_ms": 2377,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "export",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "tom@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-06T23:40:00Z",
+    "metadata": {
+      "duration_ms": 1823,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "noah@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-25T05:49:08Z",
+    "metadata": {
+      "duration_ms": 1744,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "api_call",
+    "endpoint": "/v1/users/invite",
+    "user_email": "jane@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-10T21:27:28Z",
+    "metadata": {
+      "duration_ms": 225,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "report_generated",
+    "endpoint": "/v1/users/invite",
+    "user_email": "tom@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-20T00:14:19Z",
+    "metadata": {
+      "duration_ms": 1588,
+      "status": "success"
+    }
+  },
+  {
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "dan@northwind.com",
+    "plan": "free",
+    "occurred_at": "2026-07-12T12:54:48Z",
+    "metadata": {
+      "duration_ms": 2556,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/reports/export",
+    "user_email": "carlos@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-30T00:02:15Z",
+    "metadata": {
+      "duration_ms": 2937,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/users/invite",
+    "user_email": "wei@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-20T16:11:53Z",
+    "metadata": {
+      "duration_ms": 2967,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "wei@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-19T22:34:41Z",
+    "metadata": {
+      "duration_ms": 2911,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "mike@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T07:50:32Z",
+    "metadata": {
+      "duration_ms": 3907,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/users/invite",
+    "user_email": "priya@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-02T07:14:20Z",
+    "metadata": {
+      "duration_ms": 856,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "login",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "carlos@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-15T09:51:06Z"
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "report_generated",
+    "endpoint": "/v1/users/invite",
+    "user_email": "dan@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-10T02:47:15Z",
+    "metadata": {
+      "duration_ms": 2973,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "tom@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-03T06:10:19Z",
+    "metadata": {
+      "duration_ms": 3548,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "export",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "tom@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-26T21:11:19Z",
+    "metadata": {
+      "duration_ms": 205,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "sync",
+    "endpoint": "/v1/users/invite",
+    "user_email": "dan@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-07T00:10:14Z",
+    "metadata": {
+      "duration_ms": 188,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "export",
+    "endpoint": "/v1/data/query",
+    "user_email": "sara@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-29T13:39:54Z",
+    "metadata": {
+      "duration_ms": 1849,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/data/query",
+    "user_email": "alex@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-08T19:37:58Z",
+    "metadata": {
+      "duration_ms": 3233,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "priya@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-23T17:03:22Z",
+    "metadata": {
+      "duration_ms": 154,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mike@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-09T21:49:55Z",
+    "metadata": {
+      "duration_ms": 1370,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/export",
+    "user_email": "alex@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-02T15:23:26Z",
+    "metadata": {
+      "duration_ms": 3959,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "report_generated",
+    "endpoint": "/v1/data/query",
+    "user_email": "mike@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-11T11:07:40Z",
+    "metadata": {
+      "duration_ms": 957,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "linh@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-14T02:53:38Z",
+    "metadata": {
+      "duration_ms": 2694,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "api_call",
+    "endpoint": "/v1/users/invite",
+    "user_email": "priya@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-09T08:39:21Z",
+    "metadata": {
+      "duration_ms": 529,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "login",
+    "endpoint": "/v1/users/invite",
+    "user_email": "priya@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-19T11:42:14Z",
+    "metadata": {
+      "duration_ms": 656,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "linh@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-13T10:48:54Z",
+    "metadata": {
+      "duration_ms": 1412,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "sara@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-03T01:59:50Z",
+    "metadata": {
+      "duration_ms": 2933,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "login",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "dan@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-11T09:28:44Z",
+    "metadata": {
+      "duration_ms": 1578,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "sync",
+    "endpoint": "/v1/data/query",
+    "user_email": "mike@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-27T02:30:51Z",
+    "metadata": {
+      "duration_ms": 3701,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "api_call",
+    "endpoint": "/v1/data/query",
+    "user_email": "noah@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-14T21:17:14Z",
+    "metadata": {
+      "duration_ms": 2873,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "report_generated",
+    "endpoint": "/v1/data/query",
+    "user_email": "jane@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-16T02:50:47Z",
+    "metadata": {
+      "duration_ms": 537,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "sara@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-03T10:06:53Z",
+    "metadata": {
+      "duration_ms": 1363,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "wei@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-17T23:17:10Z",
+    "metadata": {
+      "duration_ms": 3111,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "emma@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-02T10:32:19Z",
+    "metadata": {
+      "duration_ms": 575,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "login",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "dan@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-10T22:41:40Z",
+    "metadata": {
+      "duration_ms": 2610,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/reports/export",
+    "user_email": "tom@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-28T02:11:04Z",
+    "metadata": {
+      "duration_ms": 1768,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "priya@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-29T02:12:35Z",
+    "metadata": {
+      "duration_ms": 3609,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/data/query",
+    "user_email": "linh@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-08T17:16:54Z",
+    "metadata": {
+      "duration_ms": 242,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "sara@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-09T23:58:26Z",
+    "metadata": {
+      "duration_ms": 2339,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/data/query",
+    "user_email": "mike@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-17T00:32:44Z",
+    "metadata": {
+      "duration_ms": 1945,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "api_call",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "tom@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-17T00:00:04Z",
+    "metadata": {
+      "duration_ms": 2537,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/data/query",
+    "user_email": "sara@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-24T23:52:26Z",
+    "metadata": {
+      "duration_ms": 797,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "sara@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-11T22:18:55Z",
+    "metadata": {
+      "duration_ms": 3245,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/export",
+    "user_email": "linh@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-19T06:36:51Z",
+    "metadata": {
+      "duration_ms": 3704,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "wei@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-17T21:27:43Z",
+    "metadata": {
+      "duration_ms": 2617,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/data/query",
+    "user_email": "emma@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-01T21:41:48Z",
+    "metadata": {
+      "duration_ms": 2910,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/users/invite",
+    "user_email": "jane@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-29T00:26:29Z",
+    "metadata": {
+      "duration_ms": 3128,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "noah@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-09T18:00:24Z",
+    "metadata": {
+      "duration_ms": 2428,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "linh@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-11T10:28:32Z",
+    "metadata": {
+      "duration_ms": 2130,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "report_generated",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "wei@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-13T11:56:07Z",
+    "metadata": {
+      "duration_ms": 365,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "alex@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-09T23:33:33Z",
+    "metadata": {
+      "duration_ms": 2424,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/users/invite",
+    "user_email": "dan@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-31T20:08:08Z",
+    "metadata": {
+      "duration_ms": 1231,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "export",
+    "endpoint": "/v1/data/query",
+    "user_email": "emma@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-13T02:00:13Z",
+    "metadata": {
+      "duration_ms": 1891,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "sara@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-12T04:40:27Z",
+    "metadata": {
+      "duration_ms": 737,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "export",
+    "endpoint": "/v1/reports/export",
+    "user_email": "dan@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-20T10:49:08Z",
+    "metadata": {
+      "duration_ms": 2620,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "api_call",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "alex@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-25T10:34:08Z",
+    "metadata": {
+      "duration_ms": 199,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/export",
+    "user_email": "tom@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-19T22:02:52Z",
+    "metadata": {
+      "duration_ms": 2727,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "login",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "jane@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T10:47:18Z",
+    "metadata": {
+      "duration_ms": 3074,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/data/query",
+    "user_email": "carlos@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-17T00:27:39Z",
+    "metadata": {
+      "duration_ms": 2112,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/export",
+    "user_email": "wei@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-15T22:22:32Z",
+    "metadata": {
+      "duration_ms": 3230,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "report_generated",
+    "endpoint": "/v1/users/invite",
+    "user_email": "emma@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-23T07:42:10Z",
+    "metadata": {
+      "duration_ms": 2320,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "api_call",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "mike@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-22T03:54:10Z",
+    "metadata": {
+      "duration_ms": 1783,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "export",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "sara@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-23T14:32:01Z",
+    "metadata": {
+      "duration_ms": 1072,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "linh@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-24T04:46:17Z",
+    "metadata": {
+      "duration_ms": 3768,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "priya@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-09T02:10:17Z",
+    "metadata": {
+      "duration_ms": 2697,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "sync",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "mike@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-28T04:53:20Z",
+    "metadata": {
+      "duration_ms": 3199,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "tom@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-04T12:36:34Z",
+    "metadata": {
+      "duration_ms": 353,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "api_call",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "dan@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-10T19:47:43Z",
+    "metadata": {
+      "duration_ms": 1280,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "linh@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-29T22:13:13Z",
+    "metadata": {
+      "duration_ms": 2264,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "emma@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-09T11:52:11Z",
+    "metadata": {
+      "duration_ms": 3091,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "noah@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-22T05:23:41Z",
+    "metadata": {
+      "duration_ms": 855,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "wei@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-28T10:17:06Z",
+    "metadata": {
+      "duration_ms": 2742,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "report_generated",
+    "endpoint": "/v1/data/query",
+    "user_email": "tom@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-07T14:19:06Z",
+    "metadata": {
+      "duration_ms": 2443,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "dan@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-06T04:20:07Z",
+    "metadata": {
+      "duration_ms": 1004,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "login",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "emma@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-15T19:39:49Z",
+    "metadata": {
+      "duration_ms": 3113,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "carlos@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-01T14:18:53Z",
+    "metadata": {
+      "duration_ms": 1552,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "export",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "mike@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-14T13:34:57Z",
+    "metadata": {
+      "duration_ms": 1180,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "wei@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-30T05:57:12Z",
+    "metadata": {
+      "duration_ms": 3411,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "carlos@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T16:29:59Z",
+    "metadata": {
+      "duration_ms": 1203,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/export",
+    "user_email": "dan@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-26T03:11:39Z",
+    "metadata": {
+      "duration_ms": 3054,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "dan@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-13T01:40:43Z",
+    "metadata": {
+      "duration_ms": 3060,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "emma@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-09T07:51:19Z",
+    "metadata": {
+      "duration_ms": 350,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "linh@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-21T08:41:18Z",
+    "metadata": {
+      "duration_ms": 2743,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "emma@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-08T13:58:02Z",
+    "metadata": {
+      "duration_ms": 999,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "login",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "jane@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-15T10:42:42Z",
+    "metadata": {
+      "duration_ms": 2869,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "linh@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-20T21:41:04Z",
+    "metadata": {
+      "duration_ms": 2582,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "linh@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-04T13:06:05Z",
+    "metadata": {
+      "duration_ms": 3597,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "report_generated",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "jane@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T09:13:53Z",
+    "metadata": {
+      "duration_ms": 1862,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "report_generated",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "tom@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-11T21:26:27Z",
+    "metadata": {
+      "duration_ms": 2490,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "login",
+    "endpoint": "/v1/data/query",
+    "user_email": "dan@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-10T11:09:48Z",
+    "metadata": {
+      "duration_ms": 41,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/export",
+    "user_email": "emma@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-22T09:06:02Z",
+    "metadata": {
+      "duration_ms": 785,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "dan@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-20T12:36:46Z",
+    "metadata": {
+      "duration_ms": 3903,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_002",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "dan@brightlabs.io",
+    "plan": "pro",
+    "occurred_at": "2026-07-22T02:02:22Z",
+    "metadata": {
+      "duration_ms": 1184,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "priya@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-29T22:46:55Z",
+    "metadata": {
+      "duration_ms": 2665,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_003",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "wei@northwind.com",
+    "plan": "free",
+    "occurred_at": "2026-07-10T19:23:17Z",
+    "metadata": {
+      "duration_ms": 884,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mike@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-04T00:32:26Z",
+    "metadata": {
+      "duration_ms": 3258,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "report_generated",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "emma@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-26T18:15:10Z",
+    "metadata": {
+      "duration_ms": 3163,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "dan@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-04T20:51:13Z",
+    "metadata": {
+      "duration_ms": 922,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/export",
+    "user_email": "sara@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-15T02:16:37Z",
+    "metadata": {
+      "duration_ms": 416,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "priya@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-10T11:15:54Z",
+    "metadata": {
+      "duration_ms": 2286,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "sync",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "wei@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-24T10:50:51Z",
+    "metadata": {
+      "duration_ms": 3938,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "tom@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-07T09:08:29Z",
+    "metadata": {
+      "duration_ms": 3070,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "export",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "noah@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-15T02:54:19Z",
+    "metadata": {
+      "duration_ms": 3540,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "login",
+    "endpoint": "/v1/users/invite",
+    "user_email": "linh@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-12T07:10:43Z",
+    "metadata": {
+      "duration_ms": 453,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/export",
+    "user_email": "sara@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T03:59:19Z",
+    "metadata": {
+      "duration_ms": 3971,
+      "status": "success"
+    }
+  },
+  {
+    "event_type": "sync",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "wei@pinebridge.co",
+    "plan": "free",
+    "occurred_at": "2026-07-06T04:49:45Z",
+    "metadata": {
+      "duration_ms": 1244,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/export",
+    "user_email": "wei@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-28T18:05:53Z",
+    "metadata": {
+      "duration_ms": 3811,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "sara@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T03:07:08Z",
+    "metadata": {
+      "duration_ms": 2722,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "login",
+    "endpoint": "/v1/users/invite",
+    "user_email": "alex@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-14T17:35:14Z",
+    "metadata": {
+      "duration_ms": 1882,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "alex@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-09T01:49:31Z",
+    "metadata": {
+      "duration_ms": 2140,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "api_call",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "priya@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-27T02:28:41Z",
+    "metadata": {
+      "duration_ms": 200,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "wei@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-27T21:49:06Z",
+    "metadata": {
+      "duration_ms": 3475,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/export",
+    "user_email": "jane@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-26T12:52:39Z",
+    "metadata": {
+      "duration_ms": 2728,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "login",
+    "endpoint": "/v1/data/query",
+    "user_email": "priya@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-11T03:58:04Z",
+    "metadata": {
+      "duration_ms": 2057,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "carlos@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T20:16:18Z",
+    "metadata": {
+      "duration_ms": 3756,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/data/query",
+    "user_email": "jane@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-16T16:41:01Z",
+    "metadata": {
+      "duration_ms": 2979,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/export",
+    "user_email": "carlos@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-17T13:09:13Z",
+    "metadata": {
+      "duration_ms": 2083,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/reports/export",
+    "user_email": "mike@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-10T16:05:16Z",
+    "metadata": {
+      "duration_ms": 3426,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "jane@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T21:00:24Z",
+    "metadata": {
+      "duration_ms": 430,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "jane@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-08T21:29:05Z",
+    "metadata": {
+      "duration_ms": 1463,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-04T13:01:40Z",
+    "metadata": {
+      "duration_ms": 1827,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "export",
+    "endpoint": "/v1/data/query",
+    "user_email": "emma@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-23T02:41:22Z",
+    "metadata": {
+      "duration_ms": 1869,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "export",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "noah@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-11T19:12:05Z",
+    "metadata": {
+      "duration_ms": 2049,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "login",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "sara@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-29T22:50:24Z",
+    "metadata": {
+      "duration_ms": 1248,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "sync",
+    "endpoint": "/v1/users/invite",
+    "user_email": "linh@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-12T08:06:49Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "linh@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "07/14/2026 6:32pm",
+    "metadata": {
+      "duration_ms": 3222,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "login",
+    "endpoint": "/v1/users/invite",
+    "user_email": "dan@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-12T04:12:52Z",
+    "metadata": {
+      "duration_ms": 1611,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/export",
+    "user_email": "alex@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-23T08:34:28Z",
+    "metadata": {
+      "duration_ms": 2605,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "login",
+    "endpoint": "/v1/users/invite",
+    "user_email": "sara@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-25T10:24:48Z",
+    "metadata": {
+      "duration_ms": 2052,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "export",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "wei@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-13T02:33:51Z",
+    "metadata": {
+      "duration_ms": 3871,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "export",
+    "endpoint": "/v1/reports/export",
+    "user_email": "wei@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-21T22:39:40Z",
+    "metadata": {
+      "duration_ms": 1524,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_003",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "jane@northwind.com",
+    "plan": "free",
+    "occurred_at": "2026-07-09T00:44:00Z",
+    "metadata": {
+      "duration_ms": 1693,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "noah@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-28T21:45:05Z",
+    "metadata": {
+      "duration_ms": 2414,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "login",
+    "endpoint": "/v1/data/query",
+    "user_email": "jane@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-19T11:49:13Z",
+    "metadata": {
+      "duration_ms": 1430,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/export",
+    "user_email": "priya@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-14T11:57:25Z",
+    "metadata": {
+      "duration_ms": 2131,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "jane@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-23T13:29:57Z",
+    "metadata": {
+      "duration_ms": 3909,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "mike@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-08T20:37:28Z",
+    "metadata": {
+      "duration_ms": 1548,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "emma@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-14T02:59:29Z",
+    "metadata": {
+      "duration_ms": 869,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "export",
+    "endpoint": "/v1/data/query",
+    "user_email": "wei@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-15T12:14:00Z",
+    "metadata": {
+      "duration_ms": 999,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "export",
+    "endpoint": "/v1/reports/export",
+    "user_email": "carlos@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-29T09:44:35Z",
+    "metadata": {
+      "duration_ms": 3964,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/data/query",
+    "user_email": "dan@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-26T10:55:58Z",
+    "metadata": {
+      "duration_ms": 2513,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "sync",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "wei@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-25T18:53:47Z",
+    "metadata": {
+      "duration_ms": 883,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "carlos@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-30T10:27:59Z",
+    "metadata": {
+      "duration_ms": 3743,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/users/invite",
+    "user_email": "dan@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-12T20:07:42Z",
+    "metadata": {
+      "duration_ms": 926,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "tom@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-11T12:36:40Z",
+    "metadata": {
+      "duration_ms": 1458,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "api_call",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mike@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-15T18:44:03Z",
+    "metadata": {
+      "duration_ms": 1432,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_003",
+    "event_type": "sync",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "dan@northwind.com",
+    "plan": "free",
+    "occurred_at": "2026-07-18T05:31:49Z",
+    "metadata": {
+      "duration_ms": 2461,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/data/query",
+    "user_email": "mike@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-10T12:52:41Z",
+    "metadata": {
+      "duration_ms": 2469,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/export",
+    "user_email": "emma@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-02T08:31:56Z",
+    "metadata": {
+      "duration_ms": 629,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "mike@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-07T15:03:55Z",
+    "metadata": {
+      "duration_ms": 3844,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "linh@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-15T18:25:44Z",
+    "metadata": {
+      "duration_ms": 3002,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "report_generated",
+    "endpoint": "/v1/users/invite",
+    "user_email": "jane@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-13T12:44:29Z",
+    "metadata": {
+      "duration_ms": 1997,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "carlos@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-29T12:32:49Z",
+    "metadata": {
+      "duration_ms": 3145,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "export",
+    "endpoint": "/v1/data/query",
+    "user_email": "alex@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-23T05:37:55Z",
+    "metadata": {
+      "duration_ms": 3093,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_006",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "sara@pinebridge.co",
+    "plan": "free",
+    "occurred_at": "2026-07-20T12:31:46Z",
+    "metadata": {
+      "duration_ms": 3496,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_011",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "carlos@stackframe.dev",
+    "plan": "free",
+    "occurred_at": "2026-07-14T11:15:59Z"
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "export",
+    "endpoint": "/v1/reports/export",
+    "user_email": "linh@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-13T14:18:00Z",
+    "metadata": {
+      "duration_ms": 2085,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "emma@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-01T23:40:10Z",
+    "metadata": {
+      "duration_ms": 2308,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "alex@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-08T14:54:30Z",
+    "metadata": {
+      "duration_ms": 3561,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/export",
+    "user_email": "emma@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-23T15:32:30Z",
+    "metadata": {
+      "duration_ms": 893,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "login",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "linh@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-14T02:38:26Z",
+    "metadata": {
+      "duration_ms": 741,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-05T00:07:25Z",
+    "metadata": {
+      "duration_ms": 1910,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_002",
+    "event_type": "report_generated",
+    "endpoint": "/v1/data/query",
+    "user_email": "wei@brightlabs.io",
+    "plan": "pro",
+    "occurred_at": "2026-07-06T23:45:34Z",
+    "metadata": {
+      "duration_ms": 2935,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "priya@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-29T12:30:12Z",
+    "metadata": {
+      "duration_ms": 491,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/reports/export",
+    "user_email": "dan@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-19T16:24:31Z",
+    "metadata": {
+      "duration_ms": 479,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "api_call",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "linh@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-27T03:00:43Z",
+    "metadata": {
+      "duration_ms": 1564,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "jane@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-31T02:48:06Z",
+    "metadata": {
+      "duration_ms": 2338,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "mike@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-17T14:49:11Z",
+    "metadata": {
+      "duration_ms": 3891,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "priya@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-14T20:49:17Z",
+    "metadata": {
+      "duration_ms": 402,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "login",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "tom@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-31T05:12:24Z",
+    "metadata": {
+      "duration_ms": 2893,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/export",
+    "user_email": "wei@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-01T20:23:11Z",
+    "metadata": {
+      "duration_ms": 1242,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "report_generated",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "mike@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-12T07:50:48Z",
+    "metadata": {
+      "duration_ms": 3682,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "sara@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-20T17:57:47Z",
+    "metadata": {
+      "duration_ms": 1792,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "login",
+    "endpoint": "/v1/data/query",
+    "user_email": "linh@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-23T23:46:26Z",
+    "metadata": {
+      "duration_ms": 3402,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "report_generated",
+    "endpoint": "/v1/data/query",
+    "user_email": "noah@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-31T16:47:48Z",
+    "metadata": {
+      "duration_ms": 1215,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "login",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "emma@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-10T01:45:35Z",
+    "metadata": {
+      "duration_ms": 53,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "wei@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-11T09:00:26Z",
+    "metadata": {
+      "duration_ms": 2712,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "report_generated",
+    "endpoint": "/v1/users/invite",
+    "user_email": "carlos@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-14T01:53:56Z",
+    "metadata": {
+      "duration_ms": 806,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "sync",
+    "endpoint": "/v1/users/invite",
+    "user_email": "linh@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-08T14:27:58Z",
+    "metadata": {
+      "duration_ms": 2895,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "carlos@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-31T20:31:01Z",
+    "metadata": {
+      "duration_ms": 1991,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "linh@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-06T08:45:49Z",
+    "metadata": {
+      "duration_ms": 1150,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "carlos@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-19T09:54:23Z",
+    "metadata": {
+      "duration_ms": 1600,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "login",
+    "endpoint": "/v1/data/query",
+    "user_email": "wei@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-18T04:49:45Z",
+    "metadata": {
+      "duration_ms": 766,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "sara@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-23T11:10:22Z",
+    "metadata": {
+      "duration_ms": 2970,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "api_call",
+    "endpoint": "/v1/users/invite",
+    "user_email": "priya@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-09T08:39:21Z",
+    "metadata": {
+      "duration_ms": 529,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "api_call",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "priya@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-23T14:02:59Z",
+    "metadata": {
+      "duration_ms": 2903,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "export",
+    "endpoint": "/v1/data/query",
+    "user_email": "carlos@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-11T02:41:34Z",
+    "metadata": {
+      "duration_ms": 3171,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "api_call",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mike@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-01T22:13:28Z",
+    "metadata": {
+      "duration_ms": 2125,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_009",
+    "event_type": "report_generated",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "tom@driftpoint.io",
+    "plan": "free",
+    "occurred_at": "2026-07-03T15:28:49Z",
+    "metadata": {
+      "duration_ms": 1497,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "tom@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T13:57:55Z",
+    "metadata": {
+      "duration_ms": 1786,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "export",
+    "endpoint": "/v1/data/query",
+    "user_email": "priya@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-30T08:34:20Z",
+    "metadata": {
+      "duration_ms": 835,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "priya@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-23T16:10:57Z",
+    "metadata": {
+      "duration_ms": 828,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/export",
+    "user_email": "sara@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-19T01:31:44Z",
+    "metadata": {
+      "duration_ms": 300,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/users/invite",
+    "user_email": "jane@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-27T15:35:57Z",
+    "metadata": {
+      "duration_ms": 1221,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "export",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "sara@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-22T02:44:03Z",
+    "metadata": {
+      "duration_ms": 1947,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/export",
+    "user_email": "wei@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-25T06:50:14Z",
+    "metadata": {
+      "duration_ms": 2667,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "login",
+    "endpoint": "/v1/reports/export",
+    "user_email": "emma@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-08T23:57:26Z",
+    "metadata": {
+      "duration_ms": 1220,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "api_call",
+    "endpoint": "/v1/users/invite",
+    "user_email": "emma@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-04T20:20:36Z",
+    "metadata": {
+      "duration_ms": 2364,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "linh@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-21T23:04:44Z",
+    "metadata": {
+      "duration_ms": 2474,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "tom@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-13T20:14:30Z",
+    "metadata": {
+      "duration_ms": 2405,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_002",
+    "event_type": "login",
+    "endpoint": "/v1/users/invite",
+    "user_email": "sara@brightlabs.io",
+    "plan": "pro",
+    "occurred_at": "2026-07-15T13:37:01Z",
+    "metadata": {
+      "duration_ms": 2017,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "login",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "mike@beaconworks.com",
+    "plan": "pro",
+    "metadata": {
+      "duration_ms": 1165,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "priya@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-26T14:27:25Z",
+    "metadata": {
+      "duration_ms": 3074,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/data/query",
+    "user_email": "mike@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-10T12:52:41Z",
+    "metadata": {
+      "duration_ms": 2469,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/users/invite",
+    "user_email": "priya@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-16T07:45:53Z",
+    "metadata": {
+      "duration_ms": 666,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "alex@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-23T09:56:16Z",
+    "metadata": {
+      "duration_ms": 3985,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "login",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "wei@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-07T06:16:07Z",
+    "metadata": {
+      "duration_ms": 2034,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "sync",
+    "endpoint": "/v1/data/query",
+    "user_email": "priya@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-25T15:45:33Z",
+    "metadata": {
+      "duration_ms": 3981,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "jane@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T00:43:56Z",
+    "metadata": {
+      "duration_ms": 464,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "jane@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-11T15:12:53Z",
+    "metadata": {
+      "duration_ms": 3117,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/reports/export",
+    "user_email": "jane@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T10:08:25Z",
+    "metadata": {
+      "duration_ms": 2600,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "sync",
+    "endpoint": "/v1/data/query",
+    "user_email": "wei@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-01T19:05:33Z",
+    "metadata": {
+      "duration_ms": 2018,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "login",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "mike@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-05T11:43:46Z",
+    "metadata": {
+      "duration_ms": 1859,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/export",
+    "user_email": "jane@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-10T20:59:14Z",
+    "metadata": {
+      "duration_ms": 894,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_002",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "emma@brightlabs.io",
+    "plan": "pro",
+    "occurred_at": "2026-07-06T10:04:17Z",
+    "metadata": {
+      "duration_ms": 1216,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "export",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "sara@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-17T09:39:48Z",
+    "metadata": {
+      "duration_ms": 1878,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "sync",
+    "endpoint": "/v1/users/invite",
+    "user_email": "linh@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-10T19:36:26Z",
+    "metadata": {
+      "duration_ms": 2422,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "login",
+    "endpoint": "/v1/reports/export",
+    "user_email": "alex@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-24T04:53:47Z",
+    "metadata": {
+      "duration_ms": 3365,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "linh@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-02T15:13:30Z",
+    "metadata": {
+      "duration_ms": 1817,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "dan@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-14T02:41:45Z",
+    "metadata": {
+      "duration_ms": 3511,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "tom@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-07T06:46:26Z",
+    "metadata": {
+      "duration_ms": 2903,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/users/invite",
+    "user_email": "carlos@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-28T15:37:27Z",
+    "metadata": {
+      "duration_ms": 2529,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "sara@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-25T15:45:52Z",
+    "metadata": {
+      "duration_ms": 552,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "carlos@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-20T08:16:10Z",
+    "metadata": {
+      "duration_ms": 2090,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "wei@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-07T22:29:23Z",
+    "metadata": {
+      "duration_ms": 1399,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "api_call",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "wei@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-29T12:46:16Z",
+    "metadata": {
+      "duration_ms": 2065,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "jane@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-07T18:50:44Z",
+    "metadata": {
+      "duration_ms": 1119,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "mike@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-19T12:17:20Z",
+    "metadata": {
+      "duration_ms": 940,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "export",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "tom@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-05T14:46:13Z",
+    "metadata": {
+      "duration_ms": 2098,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "export",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-10T07:09:49Z",
+    "metadata": {
+      "duration_ms": 401,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "login",
+    "endpoint": "/v1/users/invite",
+    "user_email": "linh@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-15T10:57:41Z",
+    "metadata": {
+      "duration_ms": 1857,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/export",
+    "user_email": "dan@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-22T11:03:12Z",
+    "metadata": {
+      "duration_ms": 3010,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "alex@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-02T18:45:44Z",
+    "metadata": {
+      "duration_ms": 1338,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "api_call",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "linh@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-18T06:08:55Z",
+    "metadata": {
+      "duration_ms": 1608,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "dan@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-13T15:01:38Z",
+    "metadata": {
+      "duration_ms": 2105,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_009",
+    "event_type": "export",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "linh@driftpoint.io",
+    "plan": "free",
+    "occurred_at": "2026-07-20T19:49:27Z",
+    "metadata": {
+      "duration_ms": 780,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "mike@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-03T11:01:44Z",
+    "metadata": {
+      "duration_ms": 126,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "export",
+    "endpoint": "/v1/reports/export",
+    "user_email": "dan@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-03T23:55:10Z",
+    "metadata": {
+      "duration_ms": 3225,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/export",
+    "user_email": "linh@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-05T09:52:24Z",
+    "metadata": {
+      "duration_ms": 1689,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "linh@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-10T09:23:42Z",
+    "metadata": {
+      "duration_ms": 3783,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "carlos@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-08T07:00:20Z",
+    "metadata": {
+      "duration_ms": 2655,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "export",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "tom@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-02T21:17:40Z",
+    "metadata": {
+      "duration_ms": 511,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-04T13:01:40Z",
+    "metadata": {
+      "duration_ms": 1827,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "sync",
+    "endpoint": "/v1/data/query",
+    "user_email": "emma@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-02T05:13:31Z",
+    "metadata": {
+      "duration_ms": 2112,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "sara@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-31T05:05:03Z",
+    "metadata": {
+      "duration_ms": 176,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "login",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "linh@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-20T23:41:53Z",
+    "metadata": {
+      "duration_ms": 1515,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/export",
+    "user_email": "wei@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-29T11:10:05Z",
+    "metadata": {
+      "duration_ms": 2766,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "export",
+    "endpoint": "/v1/data/query",
+    "user_email": "tom@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-21T10:00:31Z",
+    "metadata": {
+      "duration_ms": 3825,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "jane@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-05T00:26:37Z",
+    "metadata": {
+      "duration_ms": 1034,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "jane@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T22:47:31Z",
+    "metadata": {
+      "duration_ms": 1021,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "api_call",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "emma@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-03T18:39:10Z",
+    "metadata": {
+      "duration_ms": 1286,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "linh@beaconworks.com",
+    "plan": "pro",
+    "metadata": {
+      "duration_ms": 2733,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-03T08:15:52Z",
+    "metadata": {
+      "duration_ms": 582,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "alex@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-03T03:48:36Z",
+    "metadata": {
+      "duration_ms": 1064,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "export",
+    "endpoint": "/v1/reports/export",
+    "user_email": "carlos@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-11T13:58:39Z",
+    "metadata": {
+      "duration_ms": 99,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/data/query",
+    "user_email": "linh@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-08T07:24:49Z",
+    "metadata": {
+      "duration_ms": 3643,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "carlos@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-31T20:31:01Z",
+    "metadata": {
+      "duration_ms": 1991,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "jane@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-26T04:38:08Z",
+    "metadata": {
+      "duration_ms": 758,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/data/query",
+    "user_email": "jane@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-15T06:29:16Z",
+    "metadata": {
+      "duration_ms": 1531,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "alex@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-22T13:27:05Z",
+    "metadata": {
+      "duration_ms": 3352,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "jane@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-26T19:26:09Z",
+    "metadata": {
+      "duration_ms": 1903,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "login",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "noah@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-26T08:38:23Z",
+    "metadata": {
+      "duration_ms": 3548,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "sara@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T00:32:11Z",
+    "metadata": {
+      "duration_ms": 3266,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "sync",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "emma@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-02T00:30:40Z",
+    "metadata": {
+      "duration_ms": 1194,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "carlos@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-06T08:50:13Z",
+    "metadata": {
+      "duration_ms": 2506,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/export",
+    "user_email": "wei@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-20T05:15:45Z",
+    "metadata": {
+      "duration_ms": 3053,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "report_generated",
+    "endpoint": "/v1/users/invite",
+    "user_email": "jane@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-02T15:52:40Z",
+    "metadata": {
+      "duration_ms": 227,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "sara@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-03T13:41:55Z",
+    "metadata": {
+      "duration_ms": 1731,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "export",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "priya@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-27T01:42:23Z",
+    "metadata": {
+      "duration_ms": 291,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "login",
+    "endpoint": "/v1/data/query",
+    "user_email": "jane@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-26T03:44:44Z",
+    "metadata": {
+      "duration_ms": 3944,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/users/invite",
+    "user_email": "alex@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-29T15:20:34Z",
+    "metadata": {
+      "duration_ms": 1575,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "alex@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-08T14:54:30Z",
+    "metadata": {
+      "duration_ms": 3561,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_002",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "alex@brightlabs.io",
+    "plan": null,
+    "occurred_at": "2026-07-04T12:47:22Z",
+    "metadata": {
+      "duration_ms": 3443,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "api_call",
+    "endpoint": "/v1/users/invite",
+    "user_email": "alex@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T00:10:29Z",
+    "metadata": {
+      "duration_ms": 2813,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "alex@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-15T18:50:38Z",
+    "metadata": {
+      "duration_ms": 3616,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "linh@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-06T08:48:43Z",
+    "metadata": {
+      "duration_ms": 2545,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_002",
+    "event_type": "sync",
+    "endpoint": "/v1/users/invite",
+    "user_email": "tom@brightlabs.io",
+    "plan": "pro",
+    "occurred_at": "2026-07-18T22:36:33Z",
+    "metadata": {
+      "duration_ms": 2898,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "linh@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-19T06:59:21Z",
+    "metadata": {
+      "duration_ms": 1869,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "linh@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-12T01:12:59Z",
+    "metadata": {
+      "duration_ms": 2830,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "sync",
+    "endpoint": "/v1/data/query",
+    "user_email": "noah@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-23T11:49:40Z",
+    "metadata": {
+      "duration_ms": 2325,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_002",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "sara@brightlabs.io",
+    "plan": "pro",
+    "occurred_at": "2026-07-03T11:25:34Z",
+    "metadata": {
+      "duration_ms": 3342,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "priya@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-16T11:25:38Z",
+    "metadata": {
+      "duration_ms": 362,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "login",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "carlos@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-09T16:33:27Z",
+    "metadata": {
+      "duration_ms": 3786,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "wei@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-28T00:15:52Z",
+    "metadata": {
+      "duration_ms": 3543,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "login",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "alex@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-02T00:12:13Z",
+    "metadata": {
+      "duration_ms": 1033,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "report_generated",
+    "endpoint": "/v1/data/query",
+    "user_email": "carlos@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-06T09:20:50Z",
+    "metadata": {
+      "duration_ms": 3110,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "login",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "dan@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-10T08:57:36Z",
+    "metadata": {
+      "duration_ms": 584,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "export",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "carlos@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-05T13:00:51Z",
+    "metadata": {
+      "duration_ms": 579,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "login",
+    "endpoint": "/v1/reports/export",
+    "user_email": "linh@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-02T13:10:58Z",
+    "metadata": {
+      "duration_ms": 1583,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "carlos@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-12T22:07:11Z",
+    "metadata": {
+      "duration_ms": 875,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_003",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "carlos@northwind.com",
+    "plan": "free",
+    "occurred_at": "07/14/2026 6:32pm",
+    "metadata": {
+      "duration_ms": 1133,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "report_generated",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mike@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-25T23:04:48Z",
+    "metadata": {
+      "duration_ms": 997,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_011",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "mike@stackframe.dev",
+    "plan": "free",
+    "occurred_at": "2026-07-20T13:52:08Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "priya@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T04:22:33Z",
+    "metadata": {
+      "duration_ms": 2479,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "noah@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-27T10:58:09Z",
+    "metadata": {
+      "duration_ms": 500,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "report_generated",
+    "endpoint": "/v1/data/query",
+    "user_email": "jane@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-16T02:50:47Z",
+    "metadata": {
+      "duration_ms": 537,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_002",
+    "event_type": "report_generated",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mike@brightlabs.io",
+    "plan": "pro",
+    "occurred_at": "2026-07-14T22:17:09Z",
+    "metadata": {
+      "duration_ms": 3062,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_002",
+    "event_type": "login",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "priya@brightlabs.io",
+    "plan": "pro",
+    "occurred_at": "2026-07-16T12:30:53Z",
+    "metadata": {
+      "duration_ms": 2739,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/users/invite",
+    "user_email": "wei@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T12:28:40Z",
+    "metadata": {
+      "duration_ms": 1314,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_005",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "priya@quokkasoft.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-09T20:34:04Z",
+    "metadata": {
+      "duration_ms": 233,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "sync",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "sara@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-31T04:27:37Z",
+    "metadata": {
+      "duration_ms": 46,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "report_generated",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "alex@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-08T06:48:08Z",
+    "metadata": {
+      "duration_ms": 3361,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_003",
+    "event_type": "api_call",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "wei@northwind.com",
+    "plan": null,
+    "occurred_at": "2026-07-29T04:29:42Z",
+    "metadata": {
+      "duration_ms": 1767,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "report_generated",
+    "endpoint": "/v1/data/query",
+    "user_email": "mike@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-13T11:04:47Z",
+    "metadata": {
+      "duration_ms": 88,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/data/query",
+    "user_email": "sara@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-12T01:13:36Z",
+    "metadata": {
+      "duration_ms": 1748,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "login",
+    "endpoint": "/v1/data/query",
+    "user_email": "jane@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-26T03:44:44Z",
+    "metadata": {
+      "duration_ms": 3944,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "api_call",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "mike@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-21T06:16:54Z",
+    "metadata": {
+      "duration_ms": 3612,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/export",
+    "user_email": "tom@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-27T11:02:02Z",
+    "metadata": {
+      "duration_ms": 1185,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "jane@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-25T15:00:48Z",
+    "metadata": {
+      "duration_ms": 3037,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "report_generated",
+    "endpoint": "/v1/reports/export",
+    "user_email": "priya@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-02T23:20:39Z",
+    "metadata": {
+      "duration_ms": 1358,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "tom@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-06T05:39:51Z",
+    "metadata": {
+      "duration_ms": 2572,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_010",
+    "event_type": "export",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "tom@beaconworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-06T23:40:00Z",
+    "metadata": {
+      "duration_ms": 1823,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/reports/export",
+    "user_email": "wei@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-21T19:53:32Z",
+    "metadata": {
+      "duration_ms": 2903,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/integrations/sync",
+    "user_email": "tom@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-10T23:03:11Z",
+    "metadata": {
+      "duration_ms": 1161,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/users/invite",
+    "user_email": "jane@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-02T19:01:01Z",
+    "metadata": {
+      "duration_ms": 3499,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/data/query",
+    "user_email": "tom@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-17T12:36:46Z",
+    "metadata": {
+      "duration_ms": 3581,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "export",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "carlos@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-13T01:37:51Z",
+    "metadata": {
+      "duration_ms": 3766,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "login",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "wei@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T15:26:54Z",
+    "metadata": {
+      "duration_ms": 2938,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "export",
+    "endpoint": "/v1/reports/export",
+    "user_email": "wei@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-03T16:32:12Z",
+    "metadata": {
+      "duration_ms": 3559,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "sync",
+    "endpoint": "/v1/reports/export",
+    "user_email": "tom@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-27T11:02:02Z",
+    "metadata": {
+      "duration_ms": 1185,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_007",
+    "event_type": "report_generated",
+    "endpoint": "/v1/campaigns/list",
+    "user_email": "mike@lumenworks.com",
+    "plan": "pro",
+    "occurred_at": "2026-07-04T10:22:35Z",
+    "metadata": {
+      "duration_ms": 227,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "sync",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "carlos@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-20T08:16:10Z",
+    "metadata": {
+      "duration_ms": 2090,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "login",
+    "endpoint": "/v1/reports/export",
+    "user_email": "jane@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-07T00:05:20Z",
+    "metadata": {
+      "duration_ms": 2691,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "api_call",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "emma@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-02T10:32:19Z",
+    "metadata": {
+      "duration_ms": 575,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_012",
+    "event_type": "sync",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "sara@orbitalgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-22T05:57:52Z",
+    "metadata": {
+      "duration_ms": 1543,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "report_generated",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "jane@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-18T00:43:56Z",
+    "metadata": {
+      "duration_ms": 464,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/export",
+    "user_email": "wei@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-19T08:31:27Z",
+    "metadata": {
+      "duration_ms": 3644,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "alex@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-07T00:29:54Z",
+    "metadata": {
+      "duration_ms": 1113,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_008",
+    "event_type": "sync",
+    "endpoint": "/v1/users/invite",
+    "user_email": "priya@haloanalytics.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-08T12:19:12Z",
+    "metadata": {
+      "duration_ms": 1091,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_004",
+    "event_type": "login",
+    "endpoint": "/v1/campaigns/create",
+    "user_email": "mike@vertexmedia.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-10T11:57:25Z",
+    "metadata": {
+      "duration_ms": 1454,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_001",
+    "event_type": "sync",
+    "endpoint": "/v1/data/query",
+    "user_email": "mike@acmeco.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-07-14T10:50:20Z",
+    "metadata": {
+      "duration_ms": 3115,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_002",
+    "event_type": "report_generated",
+    "endpoint": "/v1/dashboards/view",
+    "user_email": "alex@brightlabs.io",
+    "plan": "pro",
+    "occurred_at": "2026-07-30T20:01:52Z",
+    "metadata": {
+      "duration_ms": 1498,
+      "status": "success"
+    }
+  }
+]
