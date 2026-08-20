@@ -1,0 +1,6 @@
+node_modules
+dist
+coverage
+pnpm-lock.yaml
+data/fixtures/usage_events.json
+IMPLEMENTATION.md

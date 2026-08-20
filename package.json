@@ -1,0 +1,50 @@
+{
+  "name": "intelitics-assessment",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.22.0",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "bootstrap": "node scripts/bootstrap.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "db:bootstrap": "tsx scripts/bootstrapDb.ts",
+    "db:migrate": "drizzle-kit migrate",
+    "ingest": "tsx src/ingest/cli.ts",
+    "predev": "node scripts/preflight.mjs",
+    "dev": "tsx watch src/api/server.ts",
+    "dev:up": "pnpm bootstrap && pnpm dev",
+    "start": "node dist/api/server.js",
+    "test:unit": "vitest run --project unit",
+    "test:integration": "vitest run --project integration --maxWorkers=1",
+    "test": "pnpm test:unit && pnpm test:integration",
+    "teardown": "node scripts/teardown.mjs",
+    "verify": "tsx scripts/verify.ts"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "drizzle-orm": "^0.45.2",
+    "fastify": "^5.12.1",
+    "postgres": "^3.4.9",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@testcontainers/postgresql": "^12.1.0",
+    "@types/node": "^26.2.0",
+    "drizzle-kit": "^0.31.10",
+    "eslint": "^10.8.1",
+    "prettier": "^3.9.6",
+    "testcontainers": "^12.1.0",
+    "tsx": "^4.23.12",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.67.0",
+    "vitest": "^4.1.11"
+  }
+}
