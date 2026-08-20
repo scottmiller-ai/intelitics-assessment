@@ -2,7 +2,11 @@ import { hashFileSource } from './hashSource.js';
 import { IngestFailure, ingestHashedSource } from './persistBatch.js';
 
 type CliFailureCode =
-  'source_unreadable' | 'invalid_json' | 'root_not_array' | 'database_error';
+  | 'source_unreadable'
+  | 'invalid_utf8'
+  | 'invalid_json'
+  | 'root_not_array'
+  | 'database_error';
 
 function safeDetails(error: unknown): string {
   return (error instanceof Error ? error.message : 'Unknown failure')
@@ -11,17 +15,12 @@ function safeDetails(error: unknown): string {
 }
 
 async function main(): Promise<void> {
-  const args = process.argv.slice(2);
-  const force = args.includes('--force-reprocess');
-  const positional = args.filter(
-    (argument) => argument !== '--force-reprocess' && argument !== '--',
-  );
+  const positional = process.argv
+    .slice(2)
+    .filter((argument) => argument !== '--');
   const sourcePath = positional[0];
   if (!sourcePath || positional.length !== 1) {
-    fail(
-      'source_unreadable',
-      'Usage: pnpm ingest -- <path> [--force-reprocess]',
-    );
+    fail('source_unreadable', 'Usage: pnpm ingest -- <path>');
   }
 
   let source;
@@ -32,7 +31,7 @@ async function main(): Promise<void> {
   }
 
   try {
-    const summary = await ingestHashedSource(source, { force });
+    const summary = await ingestHashedSource(source);
     process.stdout.write(`${JSON.stringify(summary)}\n`);
   } catch (error) {
     if (error instanceof IngestFailure) fail(error.code, error.message);

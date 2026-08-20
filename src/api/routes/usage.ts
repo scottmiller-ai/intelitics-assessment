@@ -66,17 +66,30 @@ export function registerUsageRoutes(
       const window = parseUsageWindow(request.query as Record<string, unknown>);
 
       return withTenant(clients.tenant, id, async (sql) => {
-        const [totals, byEventType, byStatus, byPlan] = await Promise.all([
-          summarizeUsage({ sql, customerId: id, ...window, groupBy: 'none' }),
-          summarizeUsage({
-            sql,
-            customerId: id,
-            ...window,
-            groupBy: 'event_type',
-          }),
-          summarizeUsage({ sql, customerId: id, ...window, groupBy: 'status' }),
-          summarizeUsage({ sql, customerId: id, ...window, groupBy: 'plan' }),
-        ]);
+        const totals = await summarizeUsage({
+          sql,
+          customerId: id,
+          ...window,
+          groupBy: 'none',
+        });
+        const byEventType = await summarizeUsage({
+          sql,
+          customerId: id,
+          ...window,
+          groupBy: 'event_type',
+        });
+        const byStatus = await summarizeUsage({
+          sql,
+          customerId: id,
+          ...window,
+          groupBy: 'status',
+        });
+        const byPlan = await summarizeUsage({
+          sql,
+          customerId: id,
+          ...window,
+          groupBy: 'plan',
+        });
         return {
           customer_id: id,
           from: window.fromIso,

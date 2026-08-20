@@ -48,7 +48,16 @@ export async function buildServer(
 
   app.get('/health', async (_request, reply) => {
     try {
-      await clients.tenant.sql`select 1`;
+      await Promise.all([
+        clients.tenant.sql.begin(async (transaction) => {
+          await transaction`set local statement_timeout = '2000ms'`;
+          await transaction`select 1 from app.customers limit 1`;
+        }),
+        clients.billingAdmin.sql.begin(async (transaction) => {
+          await transaction`set local statement_timeout = '2000ms'`;
+          await transaction`select 1 from app.usage_events limit 1`;
+        }),
+      ]);
       return { status: 'ok', database: 'ready' };
     } catch {
       return reply
@@ -77,7 +86,16 @@ async function closeClient(client: DatabaseClient): Promise<void> {
 async function start(): Promise<void> {
   const app = await buildServer();
   const host = process.env.HOST ?? '127.0.0.1';
-  const port = Number(process.env.PORT ?? '3000');
+  const rawPort = process.env.PORT ?? '3000';
+  const port = Number(rawPort);
+  if (
+    !/^\d+$/.test(rawPort) ||
+    !Number.isInteger(port) ||
+    port < 1 ||
+    port > 65_535
+  ) {
+    throw new Error('PORT must be an integer from 1 through 65535');
+  }
   await app.listen({ host, port });
 
   const shutdown = async (): Promise<void> => {

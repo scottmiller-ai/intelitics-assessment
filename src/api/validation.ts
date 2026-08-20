@@ -19,12 +19,16 @@ export interface UsageWindow {
 }
 
 function parseDateTime(value: string, field: 'from' | 'to'): Date {
-  if (!explicitZone.test(value) || !zonedDateTime.safeParse(value).success) {
+  const trimmed = value.trim();
+  if (
+    !explicitZone.test(trimmed) ||
+    !zonedDateTime.safeParse(trimmed).success
+  ) {
     throw new RequestValidationError(
       `${field} must be an explicitly zoned ISO datetime`,
     );
   }
-  return new Date(value);
+  return new Date(trimmed);
 }
 
 export function parseUsageWindow(
@@ -94,7 +98,11 @@ export function requireTenantIdentity(
       code: 'customer_identity_required',
     });
   }
-  if (header !== customerId) {
+  if (Array.isArray(header) && header.length !== 1) {
+    throw new RequestValidationError('X-Customer-Id must be supplied once');
+  }
+  const value = Array.isArray(header) ? header[0] : header;
+  if (value !== customerId) {
     throw Object.assign(
       new Error('X-Customer-Id must match the requested customer'),
       {
@@ -106,7 +114,11 @@ export function requireTenantIdentity(
 }
 
 export function requireAdmin(header: string | string[] | undefined): void {
-  if (header !== 'true') {
+  if (Array.isArray(header) && header.length !== 1) {
+    throw new RequestValidationError('X-Admin must be supplied once');
+  }
+  const value = Array.isArray(header) ? header[0] : header;
+  if (value !== 'true') {
     throw Object.assign(new Error('X-Admin: true is required'), {
       statusCode: 403,
       code: 'admin_required',

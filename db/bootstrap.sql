@@ -25,9 +25,19 @@ ALTER ROLE ingest_app SET search_path = app, public;
 ALTER ROLE tenant_app SET search_path = app, public;
 ALTER ROLE billing_admin SET search_path = app, public;
 
-REVOKE ALL ON DATABASE intelitics FROM PUBLIC;
-GRANT CONNECT ON DATABASE intelitics TO migrator, ingest_app, tenant_app, billing_admin;
-GRANT CREATE ON DATABASE intelitics TO migrator;
+DO $$
+BEGIN
+  EXECUTE format('REVOKE ALL ON DATABASE %I FROM PUBLIC', current_database());
+  EXECUTE format(
+    'GRANT CONNECT ON DATABASE %I TO migrator, ingest_app, tenant_app, billing_admin',
+    current_database()
+  );
+  EXECUTE format(
+    'GRANT CREATE ON DATABASE %I TO migrator',
+    current_database()
+  );
+END
+$$;
 
 CREATE SCHEMA IF NOT EXISTS app AUTHORIZATION migrator;
 ALTER SCHEMA app OWNER TO migrator;

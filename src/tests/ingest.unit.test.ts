@@ -51,6 +51,7 @@ describe('normalizeEvent', () => {
     [null, 'invalid_record'],
     [{ ...valid, customer_id: undefined }, 'missing_customer_id'],
     [{ ...valid, customer_id: 7 }, 'invalid_customer_id'],
+    [{ ...valid, customer_id: 'bad\u0000customer' }, 'invalid_customer_id'],
     [{ ...valid, event_type: ' ' }, 'missing_event_type'],
     [{ ...valid, event_type: false }, 'invalid_event_type'],
     [{ ...valid, occurred_at: null }, 'missing_occurred_at'],
@@ -60,6 +61,10 @@ describe('normalizeEvent', () => {
     [{ ...valid, user_email: 4 }, 'invalid_user_email'],
     [{ ...valid, plan: {} }, 'invalid_plan'],
     [{ ...valid, metadata: [] }, 'invalid_metadata'],
+    [
+      { ...valid, metadata: { nested: ['bad\u0000value'] } },
+      'invalid_metadata',
+    ],
     [{ ...valid, metadata: { duration_ms: '-1ms' } }, 'invalid_duration_ms'],
     [{ ...valid, metadata: { status: ' ' } }, 'invalid_status'],
   ] as const)('rejects malformed input as %s', (raw, reason) => {
@@ -145,7 +150,6 @@ describe('canonical hashes', () => {
 
     const input = {
       sourceContentSha256: 'a'.repeat(64),
-      normalizationPolicyVersion: 1,
       sourceIndex: 2,
       reason: 'invalid_record' as const,
       raw: null,

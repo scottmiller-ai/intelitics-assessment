@@ -20,6 +20,18 @@ describe('usage query validation', () => {
     });
   });
 
+  it('trims surrounding whitespace on explicit bounds', () => {
+    expect(
+      parseUsageWindow({
+        from: ` ${from} `,
+        to: ` ${to} `,
+      }),
+    ).toMatchObject({
+      fromIso: '2026-07-01T00:00:00.000Z',
+      toIso: '2026-08-01T00:00:00.000Z',
+    });
+  });
+
   it('captures now once for the default 30-day window', () => {
     expect(
       parseUsageWindow({}, new Date('2026-08-01T00:00:00Z')),
@@ -74,6 +86,10 @@ describe('local auth adapters', () => {
       expect.objectContaining({ code: 'tenant_mismatch', statusCode: 403 }),
     );
     expect(() => requireTenantIdentity('cust_001', 'cust_001')).not.toThrow();
+    expect(() => requireTenantIdentity(['cust_001'], 'cust_001')).not.toThrow();
+    expect(() =>
+      requireTenantIdentity(['cust_001', 'cust_001'], 'cust_001'),
+    ).toThrowError(expect.objectContaining({ name: 'RequestValidationError' }));
   });
 
   it('requires the exact admin stub value', () => {
@@ -81,6 +97,10 @@ describe('local auth adapters', () => {
       expect.objectContaining({ code: 'admin_required', statusCode: 403 }),
     );
     expect(() => requireAdmin('true')).not.toThrow();
+    expect(() => requireAdmin(['true'])).not.toThrow();
+    expect(() => requireAdmin(['true', 'true'])).toThrowError(
+      expect.objectContaining({ name: 'RequestValidationError' }),
+    );
   });
 });
 

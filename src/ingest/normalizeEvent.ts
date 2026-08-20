@@ -34,6 +34,15 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
 }
 
+function containsNullCharacter(value: unknown): boolean {
+  if (typeof value === 'string') return value.includes('\0');
+  if (Array.isArray(value)) return value.some(containsNullCharacter);
+  if (!isRecord(value)) return false;
+  return Object.entries(value).some(
+    ([key, entry]) => key.includes('\0') || containsNullCharacter(entry),
+  );
+}
+
 function requiredString(
   record: Record<string, unknown>,
   field: 'customer_id' | 'event_type',
@@ -48,6 +57,7 @@ function requiredString(
   if (typeof value !== 'string') return { reason: invalidReason };
   const trimmed = value.trim();
   if (!trimmed) return { reason: missingReason };
+  if (trimmed.includes('\0')) return { reason: invalidReason };
   return { value: trimmed };
 }
 
@@ -58,6 +68,7 @@ function optionalString(
   if (value === undefined || value === null) return { value: null };
   if (typeof value !== 'string') return { reason };
   const trimmed = value.trim();
+  if (trimmed.includes('\0')) return { reason };
   return trimmed ? { value: trimmed } : { reason };
 }
 
@@ -107,14 +118,12 @@ export function sha256Canonical(value: unknown): string {
 
 export function rejectionHash(input: {
   sourceContentSha256: string;
-  normalizationPolicyVersion: number;
   sourceIndex: number;
   reason: RejectionReason;
   raw: JsonValue;
 }): string {
   return sha256Canonical({
     source_content_sha256: input.sourceContentSha256,
-    normalization_policy_version: input.normalizationPolicyVersion,
     source_index: input.sourceIndex,
     reason: input.reason,
     raw: input.raw,
@@ -158,6 +167,9 @@ export function normalizeEvent(raw: unknown): NormalizationResult {
     metadataValue !== null &&
     !isRecord(metadataValue)
   ) {
+    return { reject: true, reason: 'invalid_metadata' };
+  }
+  if (containsNullCharacter(metadataValue)) {
     return { reject: true, reason: 'invalid_metadata' };
   }
   const metadata = metadataValue == null ? {} : { ...metadataValue };
