@@ -1,7 +1,8 @@
 # Intelitics usage billing assessment
 
 A Node 22/TypeScript service that normalizes usage events into Postgres and
-answers tenant-scoped billing usage questions through Fastify.
+answers tenant-scoped billing usage questions through Fastify. The write-up is
+[DESIGN.md](DESIGN.md).
 
 ## Reviewer setup
 
@@ -90,9 +91,16 @@ assessment fixture before these July curls. The synthetic dump is August
 `cust_101`–`cust_108` and does not change these goldens.
 
 ```sh
+# The billable metric. Totals only, because nothing else was asked for.
 curl -sS \
   -H 'X-Customer-Id: cust_006' \
   'http://127.0.0.1:3000/customers/cust_006/usage?from=2026-07-01T00:00:00Z&to=2026-08-01T00:00:00Z'
+
+# The same total decomposed. Ask for any subset of
+# event_type, status, plan, endpoint; the response carries exactly those.
+curl -sS \
+  -H 'X-Customer-Id: cust_006' \
+  'http://127.0.0.1:3000/customers/cust_006/usage?from=2026-07-01T00:00:00Z&to=2026-08-01T00:00:00Z&breakdown=status,endpoint'
 
 curl -sS \
   -H 'X-Customer-Id: cust_006' \
@@ -109,6 +117,10 @@ curl -sS \
 
 The headers are local authentication adapters. They are not production
 authentication.
+
+A `404` means no usage has been recorded for that id. `app.customers` is derived
+from ingest, so a real customer with no events cannot be told apart from an
+unknown one. That constraint and its cost are in the write-up.
 
 ## Manual database and ingest workflow
 
@@ -127,13 +139,17 @@ The first assessment-fixture ingest reports `417 accepted / 16 duplicate / 9 rej
 The synthetic dump reports `241 accepted / 8 duplicate / 2 rejected`.
 An identical source is skipped by its content hash.
 
-After the synthetic source:
+After the synthetic source, `cust_103` upgrades from `free` to `pro` mid-August,
+so its plan buckets split the month and still sum to the totals:
 
 ```sh
 curl -sS \
-  -H 'X-Customer-Id: cust_101' \
-  'http://127.0.0.1:3000/customers/cust_101/usage?from=2026-08-01T00:00:00Z&to=2026-09-01T00:00:00Z'
+  -H 'X-Customer-Id: cust_103' \
+  'http://127.0.0.1:3000/customers/cust_103/usage?from=2026-08-01T00:00:00Z&to=2026-09-01T00:00:00Z&breakdown=plan'
 ```
+
+That is the reason each event stores the plan it was reported under: a window
+that spans a tier change has to be answerable without a subscription table.
 
 ## Teardown
 
