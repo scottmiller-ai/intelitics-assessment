@@ -52,13 +52,22 @@ function safeDetails(error: unknown): string {
     .slice(0, 500);
 }
 
+/**
+ * Postgres `jsonb` cannot hold a NUL, so the rejected payload we keep for
+ * forensics is not byte-exact. U+FFFD is the substitution: it is what "a
+ * character was here that this column cannot represent" already means, where an
+ * escape like `\u0000` would read as ordinary data the producer had sent. Byte
+ * exact storage needs a `bytea` column, which is a later decision.
+ */
+const unrepresentable = '\uFFFD';
+
 function postgresSafeJson(value: JsonValue): JsonValue {
-  if (typeof value === 'string') return value.replaceAll('\0', '\\u0000');
+  if (typeof value === 'string') return value.replaceAll('\0', unrepresentable);
   if (Array.isArray(value)) return value.map(postgresSafeJson);
   if (value === null || typeof value !== 'object') return value;
   return Object.fromEntries(
     Object.entries(value).map(([key, entry]) => [
-      key.replaceAll('\0', '\\u0000'),
+      key.replaceAll('\0', unrepresentable),
       postgresSafeJson(entry),
     ]),
   );

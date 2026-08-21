@@ -2,12 +2,12 @@ import { createHash } from 'node:crypto';
 
 import { z } from 'zod';
 
-import { rejectionReasons } from '../db/schema.js';
+export type { RejectionReason } from '../db/rejectionReasons.js';
+import type { RejectionReason } from '../db/rejectionReasons.js';
 
 export type JsonPrimitive = boolean | number | string | null;
 export type JsonValue =
   JsonPrimitive | JsonValue[] | { [key: string]: JsonValue };
-export type RejectionReason = (typeof rejectionReasons)[number];
 
 export interface NormalizedFact {
   customerId: string;

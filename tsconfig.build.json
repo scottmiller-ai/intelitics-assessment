@@ -7,5 +7,7 @@
     "declaration": true
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["src/**/*.test.ts", "src/tests/**"]
+  // The Drizzle schema authors migrations; it is never imported at runtime, so
+  // the shipped build carries no ORM. `pnpm typecheck` still covers it.
+  "exclude": ["src/**/*.test.ts", "src/tests/**", "src/db/schema.ts"]
 }

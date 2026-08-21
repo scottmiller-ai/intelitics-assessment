@@ -12,6 +12,8 @@ import {
   uuid,
 } from 'drizzle-orm/pg-core';
 
+import { rejectionReasons } from './rejectionReasons.js';
+
 export const app = pgSchema('app');
 
 export const customers = app.table(
@@ -101,23 +103,6 @@ export const usageEvents = app.table(
     ),
   ],
 );
-
-export const rejectionReasons = [
-  'invalid_record',
-  'missing_customer_id',
-  'invalid_customer_id',
-  'missing_event_type',
-  'invalid_event_type',
-  'missing_occurred_at',
-  'ambiguous_occurred_at',
-  'invalid_occurred_at',
-  'invalid_endpoint',
-  'invalid_user_email',
-  'invalid_plan',
-  'invalid_metadata',
-  'invalid_duration_ms',
-  'invalid_status',
-] as const;
 
 export const ingestRejections = app.table(
   'ingest_rejections',
