@@ -15,10 +15,14 @@ BEGIN
 END
 $$;
 
+-- Only ingest bypasses RLS: it writes every tenant's rows in one transaction
+-- and has no tenant to scope to. Cross-tenant *reads* are granted by policy
+-- instead, so the permission is per table, visible in the schema, and revocable
+-- in a migration. See drizzle/0001_billing_admin_read_policy.sql.
 ALTER ROLE migrator WITH LOGIN PASSWORD 'migrator' NOBYPASSRLS NOCREATEDB NOCREATEROLE;
 ALTER ROLE ingest_app WITH LOGIN PASSWORD 'ingest_app' BYPASSRLS NOCREATEDB NOCREATEROLE;
 ALTER ROLE tenant_app WITH LOGIN PASSWORD 'tenant_app' NOBYPASSRLS NOCREATEDB NOCREATEROLE;
-ALTER ROLE billing_admin WITH LOGIN PASSWORD 'billing_admin' BYPASSRLS NOCREATEDB NOCREATEROLE;
+ALTER ROLE billing_admin WITH LOGIN PASSWORD 'billing_admin' NOBYPASSRLS NOCREATEDB NOCREATEROLE;
 
 ALTER ROLE migrator SET search_path = app, public;
 ALTER ROLE ingest_app SET search_path = app, public;

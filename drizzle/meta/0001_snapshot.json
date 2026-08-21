@@ -1,0 +1,423 @@
+{
+  "id": "06b7f667-2028-463c-a07c-b41d727ec3bf",
+  "prevId": "70a6576c-3b80-46a9-9778-9fd09067e5ca",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "app.customers": {
+      "name": "customers",
+      "schema": "app",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "customers_id_not_blank": {
+          "name": "customers_id_not_blank",
+          "value": "length(btrim(\"app\".\"customers\".\"id\")) > 0"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "app.ingest_rejections": {
+      "name": "ingest_rejections",
+      "schema": "app",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "bigint",
+          "primaryKey": true,
+          "notNull": true,
+          "identity": {
+            "type": "always",
+            "name": "ingest_rejections_id_seq",
+            "schema": "app",
+            "increment": "1",
+            "startWith": "1",
+            "minValue": "1",
+            "maxValue": "9223372036854775807",
+            "cache": "1",
+            "cycle": false
+          }
+        },
+        "source_id": {
+          "name": "source_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "source_index": {
+          "name": "source_index",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "raw": {
+          "name": "raw",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "reason": {
+          "name": "reason",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "rejection_hash": {
+          "name": "rejection_hash",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "rejected_at": {
+          "name": "rejected_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "ingest_rejections_hash_idx": {
+          "name": "ingest_rejections_hash_idx",
+          "columns": [
+            {
+              "expression": "rejection_hash",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "ingest_rejections_source_id_ingest_sources_id_fk": {
+          "name": "ingest_rejections_source_id_ingest_sources_id_fk",
+          "tableFrom": "ingest_rejections",
+          "tableTo": "ingest_sources",
+          "schemaTo": "app",
+          "columnsFrom": ["source_id"],
+          "columnsTo": ["id"],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "ingest_rejections_source_index_nonnegative": {
+          "name": "ingest_rejections_source_index_nonnegative",
+          "value": "\"app\".\"ingest_rejections\".\"source_index\" >= 0"
+        },
+        "ingest_rejections_reason_valid": {
+          "name": "ingest_rejections_reason_valid",
+          "value": "\"app\".\"ingest_rejections\".\"reason\" IN ('invalid_record', 'missing_customer_id', 'invalid_customer_id', 'missing_event_type', 'invalid_event_type', 'missing_occurred_at', 'ambiguous_occurred_at', 'invalid_occurred_at', 'invalid_endpoint', 'invalid_user_email', 'invalid_plan', 'invalid_metadata', 'invalid_duration_ms', 'invalid_status')"
+        },
+        "ingest_rejections_hash_format": {
+          "name": "ingest_rejections_hash_format",
+          "value": "\"app\".\"ingest_rejections\".\"rejection_hash\" ~ '^[0-9a-f]{64}$'"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "app.ingest_sources": {
+      "name": "ingest_sources",
+      "schema": "app",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "content_sha256": {
+          "name": "content_sha256",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "source_uri": {
+          "name": "source_uri",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "byte_size": {
+          "name": "byte_size",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "ingest_sources_content_sha256_idx": {
+          "name": "ingest_sources_content_sha256_idx",
+          "columns": [
+            {
+              "expression": "content_sha256",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "ingest_sources_sha256_format": {
+          "name": "ingest_sources_sha256_format",
+          "value": "\"app\".\"ingest_sources\".\"content_sha256\" ~ '^[0-9a-f]{64}$'"
+        },
+        "ingest_sources_byte_size_nonnegative": {
+          "name": "ingest_sources_byte_size_nonnegative",
+          "value": "\"app\".\"ingest_sources\".\"byte_size\" >= 0"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "app.usage_events": {
+      "name": "usage_events",
+      "schema": "app",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "source_id": {
+          "name": "source_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "source_index": {
+          "name": "source_index",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "customer_id": {
+          "name": "customer_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "event_type": {
+          "name": "event_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "endpoint": {
+          "name": "endpoint",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_email": {
+          "name": "user_email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "plan": {
+          "name": "plan",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "occurred_at": {
+          "name": "occurred_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "duration_ms": {
+          "name": "duration_ms",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'{}'::jsonb"
+        },
+        "ingest_hash": {
+          "name": "ingest_hash",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ingested_at": {
+          "name": "ingested_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "usage_events_customer_occurred_idx": {
+          "name": "usage_events_customer_occurred_idx",
+          "columns": [
+            {
+              "expression": "customer_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "occurred_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "usage_events_occurred_idx": {
+          "name": "usage_events_occurred_idx",
+          "columns": [
+            {
+              "expression": "occurred_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "usage_events_ingest_hash_idx": {
+          "name": "usage_events_ingest_hash_idx",
+          "columns": [
+            {
+              "expression": "ingest_hash",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "usage_events_source_id_ingest_sources_id_fk": {
+          "name": "usage_events_source_id_ingest_sources_id_fk",
+          "tableFrom": "usage_events",
+          "tableTo": "ingest_sources",
+          "schemaTo": "app",
+          "columnsFrom": ["source_id"],
+          "columnsTo": ["id"],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "usage_events_customer_id_customers_id_fk": {
+          "name": "usage_events_customer_id_customers_id_fk",
+          "tableFrom": "usage_events",
+          "tableTo": "customers",
+          "schemaTo": "app",
+          "columnsFrom": ["customer_id"],
+          "columnsTo": ["id"],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "usage_events_ingest_hash_format": {
+          "name": "usage_events_ingest_hash_format",
+          "value": "\"app\".\"usage_events\".\"ingest_hash\" ~ '^[0-9a-f]{64}$'"
+        },
+        "usage_events_customer_not_blank": {
+          "name": "usage_events_customer_not_blank",
+          "value": "length(btrim(\"app\".\"usage_events\".\"customer_id\")) > 0"
+        },
+        "usage_events_event_type_not_blank": {
+          "name": "usage_events_event_type_not_blank",
+          "value": "length(btrim(\"app\".\"usage_events\".\"event_type\")) > 0"
+        },
+        "usage_events_source_index_nonnegative": {
+          "name": "usage_events_source_index_nonnegative",
+          "value": "\"app\".\"usage_events\".\"source_index\" >= 0"
+        },
+        "usage_events_duration_nonnegative": {
+          "name": "usage_events_duration_nonnegative",
+          "value": "\"app\".\"usage_events\".\"duration_ms\" IS NULL OR \"app\".\"usage_events\".\"duration_ms\" >= 0"
+        }
+      },
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {
+    "app": "app"
+  },
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

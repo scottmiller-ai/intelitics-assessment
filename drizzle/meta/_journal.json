@@ -8,6 +8,20 @@
       "when": 1787206795060,
       "tag": "0000_usage_billing_baseline",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1787284947829,
+      "tag": "0001_billing_admin_read_policy",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1787293023726,
+      "tag": "0002_migrator_and_tenant_policy_scope",
+      "breakpoints": true
     }
   ]
 }
