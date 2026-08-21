@@ -1,3 +1,4 @@
+import { Ajv } from 'ajv';
 import type { FastifyInstance } from 'fastify';
 import type { Sql } from 'postgres';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
@@ -7,6 +8,14 @@ import {
   authorizeCustomer,
   tenantPrincipal,
 } from '../api/principal.js';
+import {
+  customerEndpointsResponse,
+  customerSummaryResponse,
+  customerUsersResponse,
+  healthResponse,
+  tenantErrorResponses,
+  topCustomersResponse,
+} from '../api/schemas.js';
 import { buildServer } from '../api/server.js';
 import {
   resolveTopCustomersQuery,
@@ -14,6 +23,12 @@ import {
 } from '../api/usageWindow.js';
 import type { DatabaseClient } from '../db/client.js';
 import { toJsonInteger } from '../queries/usage.js';
+import {
+  goldenEndpoints,
+  goldenSummary,
+  goldenTopCustomers,
+  goldenUsers,
+} from './goldenResponses.js';
 
 const from = '2026-07-01T00:00:00Z';
 const to = '2026-08-01T00:00:00+00:00';
@@ -198,6 +213,61 @@ describe('principals', () => {
       expect.objectContaining({ status: 403, code: 'admin_required' }),
     );
     expect(adminPrincipal('true')).toEqual({ kind: 'admin' });
+  });
+});
+
+/**
+ * Fastify serializes responses through these schemas instead of validating
+ * against them, so an inaccurate schema silently reshapes a billing body rather
+ * than failing. These assertions are what keep the published document honest.
+ */
+describe('published response contracts', () => {
+  const ajv = new Ajv({ allErrors: true });
+
+  function assertValid(schema: object, body: unknown): void {
+    const validate = ajv.compile(schema);
+    expect(validate(body), ajv.errorsText(validate.errors)).toBe(true);
+  }
+
+  it.each([
+    ['customer summary', customerSummaryResponse, goldenSummary],
+    ['endpoint detail', customerEndpointsResponse, goldenEndpoints],
+    ['user detail', customerUsersResponse, goldenUsers],
+    ['top customers', topCustomersResponse, goldenTopCustomers],
+  ])('accepts the documented %s body', (_label, schema, body) => {
+    assertValid(schema, body);
+  });
+
+  it('accepts both documented health bodies', () => {
+    assertValid(healthResponse, { status: 'ok', database: 'ready' });
+    assertValid(healthResponse, {
+      status: 'unavailable',
+      database: 'unavailable',
+    });
+  });
+
+  it('accepts an error body and its optional details', () => {
+    assertValid(tenantErrorResponses[404], { error: 'customer_not_found' });
+    assertValid(tenantErrorResponses[400], {
+      error: 'invalid_request',
+      details: 'from must be earlier than to',
+    });
+  });
+
+  it('is strict enough to catch drift', () => {
+    const validate = ajv.compile(customerSummaryResponse);
+    const undocumentedField = { ...goldenSummary, invoice_total: 1200 };
+    const missingRequiredField: Partial<typeof goldenSummary> =
+      structuredClone(goldenSummary);
+    delete missingRequiredField.totals;
+    const wrongBucketType = {
+      ...goldenSummary,
+      by_plan: [{ plan: 'free', event_count: '3', total_duration_ms: 6458 }],
+    };
+
+    expect(validate(undocumentedField)).toBe(false);
+    expect(validate(missingRequiredField)).toBe(false);
+    expect(validate(wrongBucketType)).toBe(false);
   });
 });
 
