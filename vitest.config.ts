@@ -16,6 +16,8 @@ export default defineConfig({
           name: 'integration',
           include: ['src/tests/**/*.integration.test.ts'],
           environment: 'node',
+          // Assertions are the output here. Request logs are proven elsewhere.
+          env: { LOG_LEVEL: 'silent' },
           hookTimeout: 120_000,
           testTimeout: 120_000,
           sequence: { concurrent: false },

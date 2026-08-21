@@ -149,13 +149,23 @@ describe('canonical hashes', () => {
       (first as { ingestHash: string }).ingestHash,
     );
 
-    const input = {
-      sourceContentSha256: 'a'.repeat(64),
-      sourceIndex: 2,
-      reason: 'invalid_record' as const,
-      raw: null,
-    };
-    expect(rejectionHash(input)).toBe(rejectionHash({ ...input }));
+    // Same rejection, keys in a different order: the hash is over the canonical
+    // form, so it must not depend on how the caller built the object.
+    expect(
+      rejectionHash({
+        sourceContentSha256: 'a'.repeat(64),
+        sourceIndex: 2,
+        reason: 'invalid_record',
+        raw: { b: 2, a: 1 },
+      }),
+    ).toBe(
+      rejectionHash({
+        raw: { a: 1, b: 2 },
+        reason: 'invalid_record',
+        sourceIndex: 2,
+        sourceContentSha256: 'a'.repeat(64),
+      }),
+    );
   });
 });
 

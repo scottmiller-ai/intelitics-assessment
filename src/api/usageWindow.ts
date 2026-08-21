@@ -1,3 +1,4 @@
+import { type SummaryDimension, summaryDimensions } from '../queries/usage.js';
 import { badRequest } from './errors.js';
 import type { TopCustomersQuery, UsageWindowQuery } from './schemas.js';
 
@@ -68,6 +69,19 @@ export function resolveUsageWindow(
     throw badRequest('Usage window cannot exceed 366 days');
   }
   return toWindow(from, to);
+}
+
+/**
+ * The schema already proved every name is a known dimension, so this only makes
+ * the list canonical: repeats collapse, and the order comes from the declared
+ * dimensions rather than from the request. One window then has one response
+ * whatever order the caller spelled the parameter in, which is what makes the
+ * body worth caching later.
+ */
+export function resolveBreakdown(breakdown?: string): SummaryDimension[] {
+  if (breakdown === undefined) return [];
+  const requested = new Set(breakdown.split(','));
+  return summaryDimensions.filter((dimension) => requested.has(dimension));
 }
 
 export function resolveTopCustomersQuery(

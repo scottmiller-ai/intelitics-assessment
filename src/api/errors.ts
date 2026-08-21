@@ -18,14 +18,69 @@ export function badRequest(message: string): ApiError {
   return new ApiError(400, 'invalid_request', message);
 }
 
+interface SchemaViolation {
+  keyword: string;
+  instancePath: string;
+  params: Record<string, unknown>;
+}
+
+interface SchemaValidationError {
+  validation: SchemaViolation[];
+  validationContext?: string;
+}
+
 function isSchemaValidationError(
   error: unknown,
-): error is { code: string; message: string } {
+): error is Error & SchemaValidationError {
   return (
     error instanceof Error &&
     'code' in error &&
-    error.code === 'FST_ERR_VALIDATION'
+    error.code === 'FST_ERR_VALIDATION' &&
+    'validation' in error &&
+    Array.isArray(error.validation)
   );
+}
+
+function named(value: unknown): string | undefined {
+  return typeof value === 'string' ? value : undefined;
+}
+
+/** Fastify names the request part after its schema key. Callers say it plainly. */
+const partNames: Record<string, string> = {
+  querystring: 'query',
+  params: 'path',
+  headers: 'header',
+};
+
+/**
+ * Ajv's own wording is readable but it belongs to Ajv: upgrading the validator
+ * would silently reword a public field. `details` is ours, so it is written
+ * here from the machine-readable parts of the failure.
+ */
+export function describeViolation(error: SchemaValidationError): string {
+  const context = error.validationContext ?? '';
+  const part = partNames[context] ?? 'request';
+  const [violation] = error.validation;
+  if (!violation) return `Invalid ${part}`;
+
+  const field =
+    violation.instancePath.replace(/^\//, '') ||
+    named(violation.params.missingProperty);
+
+  switch (violation.keyword) {
+    case 'additionalProperties':
+      return `Unknown ${part} parameter: ${
+        named(violation.params.additionalProperty) ?? 'unknown'
+      }`;
+    case 'dependencies':
+      return 'from and to must be sent together';
+    case 'required':
+      return `Missing required ${part} parameter: ${field ?? 'unknown'}`;
+    default:
+      return field
+        ? `Invalid value for ${part} parameter: ${field}`
+        : `Invalid ${part}`;
+  }
 }
 
 /**
@@ -33,6 +88,16 @@ function isSchemaValidationError(
  * an internal error: it is logged with context and answered without one.
  */
 export function registerErrorHandler(app: FastifyInstance): void {
+  // Without this, an unrouted path falls through to Fastify's default body,
+  // where `error` is the reason phrase "Not Found" rather than a code. A client
+  // switching on `error` would need two vocabularies, one of them prose.
+  app.setNotFoundHandler((request, reply) => {
+    void reply.status(404).send({
+      error: 'not_found',
+      details: `No route for ${request.method} ${request.url.split('?')[0] ?? request.url}`,
+    });
+  });
+
   app.setErrorHandler((error, request, reply) => {
     if (error instanceof ApiError) {
       void reply
@@ -59,7 +124,7 @@ export function registerErrorHandler(app: FastifyInstance): void {
     if (isSchemaValidationError(error)) {
       void reply
         .status(400)
-        .send({ error: 'invalid_request', details: error.message });
+        .send({ error: 'invalid_request', details: describeViolation(error) });
       return;
     }
     request.log.error({ err: error }, 'Request failed');

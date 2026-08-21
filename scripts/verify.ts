@@ -5,9 +5,11 @@ import net from 'node:net';
 
 import postgres from 'postgres';
 
+import { summaryDimensions } from '../src/queries/usage.js';
 import {
   goldenEndpoints,
   goldenSummary,
+  goldenSummaryBreakdowns,
   goldenTopCustomers,
   goldenUsers,
 } from '../src/tests/goldenResponses.js';
@@ -194,6 +196,14 @@ try {
     goldenSummary,
   );
   assert.deepEqual(
+    await json(
+      `${baseUrl}/customers/cust_006/usage?${range}` +
+        `&breakdown=${summaryDimensions.join(',')}`,
+      { 'x-customer-id': 'cust_006' },
+    ),
+    goldenSummaryBreakdowns,
+  );
+  assert.deepEqual(
     await json(`${baseUrl}/customers/cust_006/usage/endpoints?${range}`, {
       'x-customer-id': 'cust_006',
     }),
@@ -230,6 +240,13 @@ try {
       { 'x-customer-id': 'cust_005' },
       403,
       'tenant_mismatch',
+    ],
+    // A dimension we do not publish is refused, not silently ignored.
+    [
+      `/customers/cust_006/usage?${range}&breakdown=user_email`,
+      { 'x-customer-id': 'cust_006' },
+      400,
+      'invalid_request',
     ],
     [`/usage/top-customers?${range}`, {}, 403, 'admin_required'],
     [

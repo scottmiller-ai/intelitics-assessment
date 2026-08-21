@@ -47,19 +47,26 @@ async function closeClient(client: DatabaseClient): Promise<void> {
   await client.close();
 }
 
-async function start(): Promise<void> {
-  const app = await buildServer();
-  const host = process.env.HOST ?? '127.0.0.1';
-  const rawPort = process.env.PORT ?? '3000';
-  const port = Number(rawPort);
+function servingPort(): number {
+  const raw = process.env.PORT ?? '3000';
+  const port = Number(raw);
   if (
-    !/^\d+$/.test(rawPort) ||
+    !/^\d+$/.test(raw) ||
     !Number.isInteger(port) ||
     port < 1 ||
     port > 65_535
   ) {
     throw new Error('PORT must be an integer from 1 through 65535');
   }
+  return port;
+}
+
+async function start(): Promise<void> {
+  // Environment before construction: a typo in PORT should not open two
+  // connection pools on its way to failing.
+  const port = servingPort();
+  const host = process.env.HOST ?? '127.0.0.1';
+  const app = await buildServer();
   await app.listen({ host, port });
 
   const shutdown = async (): Promise<void> => {

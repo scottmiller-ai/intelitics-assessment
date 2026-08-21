@@ -3,12 +3,9 @@ import type { FastifyInstance } from 'fastify';
 import type { DatabaseClient } from '../../db/client.js';
 import { withTenantScope } from '../../db/tenantSession.js';
 import {
-  selectCustomerTotals,
-  selectCustomerUsageByEndpoint,
-  selectCustomerUsageByEventType,
-  selectCustomerUsageByPlan,
-  selectCustomerUsageByStatus,
+  selectCustomerEndpointDetail,
   selectCustomerUsageByUserEmail,
+  selectCustomerUsageSummary,
   selectTopCustomers,
 } from '../../queries/usage.js';
 import {
@@ -20,14 +17,20 @@ import {
   adminErrorResponses,
   adminHeaders,
   type AdminHeaders,
+  type CustomerEndpoints,
   customerEndpointsResponse,
   customerParams,
   type CustomerParams,
+  type CustomerSummary,
   customerSummaryResponse,
+  type CustomerUsers,
   customerUsersResponse,
+  summaryQuery,
+  type SummaryQuery,
   tenantErrorResponses,
   tenantHeaders,
   type TenantHeaders,
+  type TopCustomers,
   topCustomersQuery,
   type TopCustomersQuery,
   topCustomersResponse,
@@ -35,6 +38,7 @@ import {
   type UsageWindowQuery,
 } from '../schemas.js';
 import {
+  resolveBreakdown,
   resolveTopCustomersQuery,
   resolveUsageWindow,
 } from '../usageWindow.js';
@@ -44,22 +48,28 @@ export interface UsageRouteClients {
   billingAdmin: DatabaseClient;
 }
 
-interface TenantRoute {
+/**
+ * `Reply` is the published response schema's own type, so a handler that stops
+ * matching what `/docs` promises fails to compile.
+ */
+interface TenantRoute<Reply, Query = UsageWindowQuery> {
   Params: CustomerParams;
-  Querystring: UsageWindowQuery;
+  Querystring: Query;
   Headers: TenantHeaders;
+  Reply: Reply;
 }
 
 interface AdminRoute {
   Querystring: TopCustomersQuery;
   Headers: AdminHeaders;
+  Reply: TopCustomers;
 }
 
 export function registerUsageRoutes(
   app: FastifyInstance,
   clients: UsageRouteClients,
 ): void {
-  app.get<TenantRoute>(
+  app.get<TenantRoute<CustomerSummary, SummaryQuery>>(
     '/customers/:id/usage',
     {
       schema: {
@@ -67,10 +77,10 @@ export function registerUsageRoutes(
         tags: ['tenant'],
         summary: 'Customer usage summary',
         description:
-          'Totals for the window plus a bucket per event type, status, and event-time plan.',
+          'What this customer used in the window. Totals only unless `breakdown` names dimensions to decompose them by, so the response size is the caller\u2019s choice rather than ours.',
         params: customerParams,
         headers: tenantHeaders,
-        querystring: usageWindowQuery,
+        querystring: summaryQuery,
         response: { 200: customerSummaryResponse, ...tenantErrorResponses },
       },
     },
@@ -78,34 +88,35 @@ export function registerUsageRoutes(
       const principal = tenantPrincipal(request.headers['x-customer-id']);
       authorizeCustomer(principal, request.params.id);
       const window = resolveUsageWindow(request.query);
+      const dimensions = resolveBreakdown(request.query.breakdown);
 
       return withTenantScope(
         clients.tenant,
         principal.customerId,
-        async (sql) => {
-          const scope = { sql, customerId: principal.customerId, ...window };
-          // Awaited in order: all four share one transaction on one connection.
-          return {
-            customer_id: principal.customerId,
-            from: window.fromIso,
-            to: window.toIso,
-            totals: await selectCustomerTotals(scope),
-            by_event_type: await selectCustomerUsageByEventType(scope),
-            by_status: await selectCustomerUsageByStatus(scope),
-            by_plan: await selectCustomerUsageByPlan(scope),
-          };
-        },
+        async (sql) => ({
+          customer_id: principal.customerId,
+          from: window.fromIso,
+          to: window.toIso,
+          ...(await selectCustomerUsageSummary({
+            sql,
+            customerId: principal.customerId,
+            dimensions,
+            ...window,
+          })),
+        }),
       );
     },
   );
 
-  app.get<TenantRoute>(
+  app.get<TenantRoute<CustomerEndpoints>>(
     '/customers/:id/usage/endpoints',
     {
       schema: {
         operationId: 'getCustomerUsageByEndpoint',
         tags: ['tenant'],
-        summary: 'Customer usage by endpoint',
+        summary: 'Detailed customer usage per endpoint',
+        description:
+          'Per endpoint: totals, mean and slowest timed duration, and the producer-reported status split.',
         params: customerParams,
         headers: tenantHeaders,
         querystring: usageWindowQuery,
@@ -124,7 +135,7 @@ export function registerUsageRoutes(
           customer_id: principal.customerId,
           from: window.fromIso,
           to: window.toIso,
-          endpoints: await selectCustomerUsageByEndpoint({
+          endpoints: await selectCustomerEndpointDetail({
             sql,
             customerId: principal.customerId,
             ...window,
@@ -134,7 +145,7 @@ export function registerUsageRoutes(
     },
   );
 
-  app.get<TenantRoute>(
+  app.get<TenantRoute<CustomerUsers>>(
     '/customers/:id/usage/users',
     {
       schema: {
@@ -179,7 +190,7 @@ export function registerUsageRoutes(
         tags: ['admin'],
         summary: 'Top customers by usage',
         description:
-          'Cross-tenant ranking. Served by a role that bypasses RLS and cannot write.',
+          'Cross-tenant ranking. Served by a read-only role whose cross-tenant reach is one RLS policy on one table, not a bypass.',
         headers: adminHeaders,
         querystring: topCustomersQuery,
         response: { 200: topCustomersResponse, ...adminErrorResponses },

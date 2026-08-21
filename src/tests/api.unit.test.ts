@@ -18,14 +18,16 @@ import {
 } from '../api/schemas.js';
 import { buildServer } from '../api/server.js';
 import {
+  resolveBreakdown,
   resolveTopCustomersQuery,
   resolveUsageWindow,
 } from '../api/usageWindow.js';
 import type { DatabaseClient } from '../db/client.js';
-import { toJsonInteger } from '../queries/usage.js';
+import { summaryDimensions, toJsonInteger } from '../queries/usage.js';
 import {
   goldenEndpoints,
   goldenSummary,
+  goldenSummaryBreakdowns,
   goldenTopCustomers,
   goldenUsers,
 } from './goldenResponses.js';
@@ -43,7 +45,6 @@ function unusedClient(): DatabaseClient {
     throw new Error('The database must not be reached');
   };
   return {
-    db: unreachable as unknown as DatabaseClient['db'],
     sql: unreachable as unknown as Sql,
     close: () => Promise.resolve(),
   };
@@ -134,6 +135,24 @@ describe('request contract', () => {
     expect(foreign.json()).toMatchObject({ error: 'tenant_mismatch' });
   });
 
+  // Fastify's default not-found body puts the reason phrase "Not Found" in
+  // `error`, which is documented as a stable code. One envelope, always.
+  it.each([
+    ['an unknown path', 'GET', '/nope?from=x'],
+    ['a wrong method on a known path', 'POST', `/customers/cust_001/usage`],
+  ])(
+    'answers %s with the documented error shape',
+    async (_label, method, url) => {
+      const response = await app.inject({
+        method: method as 'GET' | 'POST',
+        url,
+        headers: { 'x-customer-id': 'cust_001' },
+      });
+      expect(response.statusCode).toBe(404);
+      expect(response.json()).toMatchObject({ error: 'not_found' });
+    },
+  );
+
   it('requires the exact admin grant', async () => {
     const response = await app.inject({
       url: `/usage/top-customers?${range}`,
@@ -141,6 +160,37 @@ describe('request contract', () => {
     });
     expect(response.statusCode).toBe(403);
     expect(response.json()).toMatchObject({ error: 'admin_required' });
+  });
+
+  /**
+   * `details` is a published field, so its wording has to be ours. If these
+   * strings only ever came from Ajv, upgrading the validator would reword the
+   * API.
+   */
+  it.each([
+    [
+      `/customers/cust_001/usage?${range}&extra=x`,
+      'Unknown query parameter: extra',
+    ],
+    [
+      `/customers/cust_001/usage?from=${from}`,
+      'from and to must be sent together',
+    ],
+    [
+      '/customers/cust_001/usage?from=2026-07-01T00:00:00&to=2026-08-01T00:00:00',
+      'Invalid value for query parameter: from',
+    ],
+    [
+      `/customers/${'c'.repeat(65)}/usage?${range}`,
+      'Invalid value for path parameter: id',
+    ],
+  ])('explains %s in our own words', async (url, details) => {
+    const response = await app.inject({
+      url,
+      headers: { 'x-customer-id': 'cust_001' },
+    });
+    expect(response.statusCode).toBe(400);
+    expect(response.json()).toEqual({ error: 'invalid_request', details });
   });
 
   it('publishes every route in the generated document', async () => {
@@ -190,6 +240,26 @@ describe('usage window resolution', () => {
   });
 });
 
+describe('breakdown resolution', () => {
+  it('asks for nothing when the parameter is absent', () => {
+    expect(resolveBreakdown(undefined)).toEqual([]);
+  });
+
+  it('answers a repeated dimension once', () => {
+    expect(resolveBreakdown('plan,plan,plan')).toEqual(['plan']);
+  });
+
+  it('reports in the declared order, not the requested order', () => {
+    expect(resolveBreakdown('endpoint,event_type')).toEqual([
+      'event_type',
+      'endpoint',
+    ]);
+    expect(
+      resolveBreakdown([...summaryDimensions].reverse().join(',')),
+    ).toEqual([...summaryDimensions]);
+  });
+});
+
 describe('principals', () => {
   it('separates missing identity from unauthorized identity', () => {
     expect(() => tenantPrincipal(undefined)).toThrowError(
@@ -217,9 +287,12 @@ describe('principals', () => {
 });
 
 /**
- * Fastify serializes responses through these schemas instead of validating
- * against them, so an inaccurate schema silently reshapes a billing body rather
- * than failing. These assertions are what keep the published document honest.
+ * Handlers are typed from these schemas, so a body that stops matching the
+ * document fails to compile. What the compiler cannot check is whether the
+ * schema itself describes the numbers we mean to publish: Fastify serializes
+ * responses through it rather than validating against it, so a loose schema
+ * quietly reshapes a billing body instead of failing. These assertions are the
+ * other half.
  */
 describe('published response contracts', () => {
   const ajv = new Ajv({ allErrors: true });
@@ -231,6 +304,11 @@ describe('published response contracts', () => {
 
   it.each([
     ['customer summary', customerSummaryResponse, goldenSummary],
+    [
+      'decomposed customer summary',
+      customerSummaryResponse,
+      goldenSummaryBreakdowns,
+    ],
     ['endpoint detail', customerEndpointsResponse, goldenEndpoints],
     ['user detail', customerUsersResponse, goldenUsers],
     ['top customers', topCustomersResponse, goldenTopCustomers],
@@ -254,6 +332,64 @@ describe('published response contracts', () => {
     });
   });
 
+  /**
+   * The example on the page is the first thing a reader trusts and the last
+   * thing anything checks. Field-level examples used to be composed into one
+   * per bucket, which published a body whose breakdowns each carried the grand
+   * total and could not sum to it. Pinning each published example to the golden
+   * closes the loop: the integration suite proves the golden is what the
+   * database returns, so the documented example is a real response.
+   */
+  it.each([
+    ['customer summary', customerSummaryResponse, goldenSummary],
+    ['endpoint detail', customerEndpointsResponse, goldenEndpoints],
+    ['user detail', customerUsersResponse, goldenUsers],
+  ])(
+    'publishes a real response as the %s example',
+    (_label, schema, golden) => {
+      expect(schema.examples[0]).toEqual(golden);
+    },
+  );
+
+  it('publishes a real decomposed response as the second summary example', () => {
+    // The page shows two dimensions rather than all four so it stays readable,
+    // so it has to be the golden narrowed to exactly those keys.
+    const [, decomposed] = customerSummaryResponse.examples;
+    const shown = Object.keys(decomposed.breakdowns);
+    expect(shown).not.toHaveLength(0);
+    expect(decomposed).toEqual({
+      ...goldenSummary,
+      breakdowns: Object.fromEntries(
+        shown.map((dimension) => [
+          dimension,
+          goldenSummaryBreakdowns.breakdowns[
+            dimension as keyof typeof goldenSummaryBreakdowns.breakdowns
+          ],
+        ]),
+      ),
+    });
+  });
+
+  it('publishes a real response as the top customers example', () => {
+    // The example shows a shorter list than the golden so the page stays
+    // readable, so it is the same ranking truncated to its own limit.
+    const [example] = topCustomersResponse.examples;
+    expect(example).toEqual({
+      ...goldenTopCustomers,
+      limit: example.limit,
+      customers: goldenTopCustomers.customers.slice(0, example.limit),
+    });
+  });
+
+  it.each([
+    ['customer summary', customerSummaryResponse],
+    ['endpoint detail', customerEndpointsResponse],
+    ['user detail', customerUsersResponse],
+    ['top customers', topCustomersResponse],
+  ])('validates its own %s example', (_label, schema) => {
+    assertValid(schema, schema.examples[0]);
+  });
+
   it('is strict enough to catch drift', () => {
     const validate = ajv.compile(customerSummaryResponse);
     const undocumentedField = { ...goldenSummary, invoice_total: 1200 };
@@ -262,12 +398,25 @@ describe('published response contracts', () => {
     delete missingRequiredField.totals;
     const wrongBucketType = {
       ...goldenSummary,
-      by_plan: [{ plan: 'free', event_count: '3', total_duration_ms: 6458 }],
+      breakdowns: {
+        plan: [{ plan: 'free', event_count: '3', total_duration_ms: 6458 }],
+      },
+    };
+    // A dimension we never published cannot appear just because a client asked
+    // for it, which is what keeps `breakdown` a closed vocabulary end to end.
+    const undocumentedDimension = {
+      ...goldenSummary,
+      breakdowns: {
+        user_email: [
+          { user_email: 'a@b.co', event_count: 3, total_duration_ms: 6458 },
+        ],
+      },
     };
 
     expect(validate(undocumentedField)).toBe(false);
     expect(validate(missingRequiredField)).toBe(false);
     expect(validate(wrongBucketType)).toBe(false);
+    expect(validate(undocumentedDimension)).toBe(false);
   });
 });
 
