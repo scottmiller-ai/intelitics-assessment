@@ -1,3 +1,4 @@
+import { ingestUsage, parseIngestInvocation } from './cliArgs.js';
 import { hashFileSource } from './hashSource.js';
 import { IngestFailure, ingestHashedSource } from './persistBatch.js';
 
@@ -15,17 +16,20 @@ function safeDetails(error: unknown): string {
 }
 
 async function main(): Promise<void> {
-  const positional = process.argv
-    .slice(2)
-    .filter((argument) => argument !== '--');
-  const sourcePath = positional[0];
-  if (!sourcePath || positional.length !== 1) {
-    fail('source_unreadable', 'Usage: pnpm ingest -- <path>');
+  const invocation = parseIngestInvocation(process.argv.slice(2));
+  if (invocation.kind === 'help') {
+    process.stdout.write(
+      `${ingestUsage}\n\nExamples:\n  pnpm ingest -- data/fixtures/usage_events.json\n  pnpm ingest -- data/fixtures/synthetic_usage.json\n`,
+    );
+    return;
+  }
+  if (invocation.kind === 'usage') {
+    fail('source_unreadable', ingestUsage);
   }
 
   let source;
   try {
-    source = await hashFileSource(sourcePath);
+    source = await hashFileSource(invocation.sourcePath);
   } catch (error) {
     fail('source_unreadable', safeDetails(error));
   }

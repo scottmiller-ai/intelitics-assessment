@@ -1,177 +1,203 @@
 import type { FastifyInstance } from 'fastify';
-import type { Sql } from 'postgres';
 
 import type { DatabaseClient } from '../../db/client.js';
+import { withTenantScope } from '../../db/tenantSession.js';
 import {
-  groupedRows,
-  summarizeUsage,
-  type GroupedMetric,
-  type Metric,
-} from '../../queries/summarizeUsage.js';
+  selectCustomerTotals,
+  selectCustomerUsageByEndpoint,
+  selectCustomerUsageByEventType,
+  selectCustomerUsageByPlan,
+  selectCustomerUsageByStatus,
+  selectCustomerUsageByUserEmail,
+  selectTopCustomers,
+} from '../../queries/usage.js';
 import {
-  parseTopCustomersQuery,
-  parseUsageWindow,
-  requireAdmin,
-  requireTenantIdentity,
-} from '../validation.js';
+  adminPrincipal,
+  authorizeCustomer,
+  tenantPrincipal,
+} from '../principal.js';
+import {
+  adminErrorResponses,
+  adminHeaders,
+  type AdminHeaders,
+  customerEndpointsResponse,
+  customerParams,
+  type CustomerParams,
+  customerSummaryResponse,
+  customerUsersResponse,
+  tenantErrorResponses,
+  tenantHeaders,
+  type TenantHeaders,
+  topCustomersQuery,
+  type TopCustomersQuery,
+  topCustomersResponse,
+  usageWindowQuery,
+  type UsageWindowQuery,
+} from '../schemas.js';
+import {
+  resolveTopCustomersQuery,
+  resolveUsageWindow,
+} from '../usageWindow.js';
 
 export interface UsageRouteClients {
   tenant: DatabaseClient;
   billingAdmin: DatabaseClient;
 }
 
-interface CustomerParams {
-  id: string;
+interface TenantRoute {
+  Params: CustomerParams;
+  Querystring: UsageWindowQuery;
+  Headers: TenantHeaders;
 }
 
-function asMetric(value: Metric | GroupedMetric[]): Metric {
-  if (Array.isArray(value)) throw new Error('Expected aggregate metric');
-  return value;
-}
-
-function asGroups(value: Metric | GroupedMetric[]): GroupedMetric[] {
-  if (!Array.isArray(value)) throw new Error('Expected grouped metrics');
-  return value;
-}
-
-async function withTenant<T>(
-  client: DatabaseClient,
-  customerId: string,
-  callback: (sql: Sql) => Promise<T>,
-): Promise<T> {
-  return client.sql.begin(async (transaction) => {
-    await transaction`select set_config('app.current_customer_id', ${customerId}, true)`;
-    const [customer] = await transaction<{ id: string }[]>`
-      select id from app.customers where id = ${customerId}
-    `;
-    if (!customer) {
-      throw Object.assign(new Error('Customer not found'), {
-        statusCode: 404,
-        code: 'customer_not_found',
-      });
-    }
-    return callback(transaction as unknown as Sql);
-  }) as Promise<T>;
+interface AdminRoute {
+  Querystring: TopCustomersQuery;
+  Headers: AdminHeaders;
 }
 
 export function registerUsageRoutes(
   app: FastifyInstance,
   clients: UsageRouteClients,
 ): void {
-  app.get<{ Params: CustomerParams }>(
+  app.get<TenantRoute>(
     '/customers/:id/usage',
+    {
+      schema: {
+        operationId: 'getCustomerUsage',
+        tags: ['tenant'],
+        summary: 'Customer usage summary',
+        description:
+          'Totals for the window plus a bucket per event type, status, and event-time plan.',
+        params: customerParams,
+        headers: tenantHeaders,
+        querystring: usageWindowQuery,
+        response: { 200: customerSummaryResponse, ...tenantErrorResponses },
+      },
+    },
     async (request) => {
-      const { id } = request.params;
-      requireTenantIdentity(request.headers['x-customer-id'], id);
-      const window = parseUsageWindow(request.query as Record<string, unknown>);
+      const principal = tenantPrincipal(request.headers['x-customer-id']);
+      authorizeCustomer(principal, request.params.id);
+      const window = resolveUsageWindow(request.query);
 
-      return withTenant(clients.tenant, id, async (sql) => {
-        const totals = await summarizeUsage({
-          sql,
-          customerId: id,
-          ...window,
-          groupBy: 'none',
-        });
-        const byEventType = await summarizeUsage({
-          sql,
-          customerId: id,
-          ...window,
-          groupBy: 'event_type',
-        });
-        const byStatus = await summarizeUsage({
-          sql,
-          customerId: id,
-          ...window,
-          groupBy: 'status',
-        });
-        const byPlan = await summarizeUsage({
-          sql,
-          customerId: id,
-          ...window,
-          groupBy: 'plan',
-        });
-        return {
-          customer_id: id,
+      return withTenantScope(
+        clients.tenant,
+        principal.customerId,
+        async (sql) => {
+          const scope = { sql, customerId: principal.customerId, ...window };
+          // Awaited in order: all four share one transaction on one connection.
+          return {
+            customer_id: principal.customerId,
+            from: window.fromIso,
+            to: window.toIso,
+            totals: await selectCustomerTotals(scope),
+            by_event_type: await selectCustomerUsageByEventType(scope),
+            by_status: await selectCustomerUsageByStatus(scope),
+            by_plan: await selectCustomerUsageByPlan(scope),
+          };
+        },
+      );
+    },
+  );
+
+  app.get<TenantRoute>(
+    '/customers/:id/usage/endpoints',
+    {
+      schema: {
+        operationId: 'getCustomerUsageByEndpoint',
+        tags: ['tenant'],
+        summary: 'Customer usage by endpoint',
+        params: customerParams,
+        headers: tenantHeaders,
+        querystring: usageWindowQuery,
+        response: { 200: customerEndpointsResponse, ...tenantErrorResponses },
+      },
+    },
+    async (request) => {
+      const principal = tenantPrincipal(request.headers['x-customer-id']);
+      authorizeCustomer(principal, request.params.id);
+      const window = resolveUsageWindow(request.query);
+
+      return withTenantScope(
+        clients.tenant,
+        principal.customerId,
+        async (sql) => ({
+          customer_id: principal.customerId,
           from: window.fromIso,
           to: window.toIso,
-          totals: asMetric(totals),
-          by_event_type: groupedRows('event_type', asGroups(byEventType)),
-          by_status: groupedRows('status', asGroups(byStatus)),
-          by_plan: groupedRows('plan', asGroups(byPlan)),
-        };
-      });
+          endpoints: await selectCustomerUsageByEndpoint({
+            sql,
+            customerId: principal.customerId,
+            ...window,
+          }),
+        }),
+      );
     },
   );
 
-  app.get<{ Params: CustomerParams }>(
-    '/customers/:id/usage/endpoints',
-    async (request) => {
-      const { id } = request.params;
-      requireTenantIdentity(request.headers['x-customer-id'], id);
-      const window = parseUsageWindow(request.query as Record<string, unknown>);
-      return withTenant(clients.tenant, id, async (sql) => ({
-        customer_id: id,
-        from: window.fromIso,
-        to: window.toIso,
-        endpoints: groupedRows(
-          'endpoint',
-          asGroups(
-            await summarizeUsage({
-              sql,
-              customerId: id,
-              ...window,
-              groupBy: 'endpoint',
-            }),
-          ),
-        ),
-      }));
-    },
-  );
-
-  app.get<{ Params: CustomerParams }>(
+  app.get<TenantRoute>(
     '/customers/:id/usage/users',
+    {
+      schema: {
+        operationId: 'getCustomerUsageByUser',
+        tags: ['tenant'],
+        summary: 'Customer usage by user email',
+        description:
+          'Showback view. Emails are producer-supplied PII and are never used to infer tenancy.',
+        params: customerParams,
+        headers: tenantHeaders,
+        querystring: usageWindowQuery,
+        response: { 200: customerUsersResponse, ...tenantErrorResponses },
+      },
+    },
     async (request) => {
-      const { id } = request.params;
-      requireTenantIdentity(request.headers['x-customer-id'], id);
-      const window = parseUsageWindow(request.query as Record<string, unknown>);
-      return withTenant(clients.tenant, id, async (sql) => ({
-        customer_id: id,
-        from: window.fromIso,
-        to: window.toIso,
-        users: groupedRows(
-          'user_email',
-          asGroups(
-            await summarizeUsage({
-              sql,
-              customerId: id,
-              ...window,
-              groupBy: 'user_email',
-            }),
-          ),
-        ),
-      }));
+      const principal = tenantPrincipal(request.headers['x-customer-id']);
+      authorizeCustomer(principal, request.params.id);
+      const window = resolveUsageWindow(request.query);
+
+      return withTenantScope(
+        clients.tenant,
+        principal.customerId,
+        async (sql) => ({
+          customer_id: principal.customerId,
+          from: window.fromIso,
+          to: window.toIso,
+          users: await selectCustomerUsageByUserEmail({
+            sql,
+            customerId: principal.customerId,
+            ...window,
+          }),
+        }),
+      );
     },
   );
 
-  app.get('/usage/top-customers', async (request) => {
-    requireAdmin(request.headers['x-admin']);
-    const window = parseTopCustomersQuery(
-      request.query as Record<string, unknown>,
-    );
-    const customers = asGroups(
-      await summarizeUsage({
-        sql: clients.billingAdmin.sql,
-        ...window,
-        groupBy: 'customer_id',
-        orderBy: 'event_count',
+  app.get<AdminRoute>(
+    '/usage/top-customers',
+    {
+      schema: {
+        operationId: 'getTopCustomers',
+        tags: ['admin'],
+        summary: 'Top customers by usage',
+        description:
+          'Cross-tenant ranking. Served by a role that bypasses RLS and cannot write.',
+        headers: adminHeaders,
+        querystring: topCustomersQuery,
+        response: { 200: topCustomersResponse, ...adminErrorResponses },
+      },
+    },
+    async (request) => {
+      adminPrincipal(request.headers['x-admin']);
+      const window = resolveTopCustomersQuery(request.query);
+
+      return {
+        from: window.fromIso,
+        to: window.toIso,
         limit: window.limit,
-      }),
-    );
-    return {
-      from: window.fromIso,
-      to: window.toIso,
-      limit: window.limit,
-      customers: groupedRows('customer_id', customers),
-    };
-  });
+        customers: await selectTopCustomers({
+          sql: clients.billingAdmin.sql,
+          ...window,
+        }),
+      };
+    },
+  );
 }

@@ -78,8 +78,7 @@ command('pnpm', ['install', '--frozen-lockfile']);
 command('docker', ['compose', 'up', '-d', '--wait', 'postgres']);
 command('pnpm', ['db:bootstrap']);
 command('pnpm', ['db:migrate']);
-command('pnpm', ['ingest', '--', 'data/fixtures/usage_events.json']);
 
 process.stdout.write(
-  '\nReady. Next commands:\n  pnpm dev\n  pnpm verify\n  pnpm teardown\n',
+  '\nReady. Postgres is empty. Next:\n  pnpm dev\n  pnpm ingest -- data/fixtures/usage_events.json\n  pnpm ingest -- data/fixtures/synthetic_usage.json\n  pnpm verify\n  pnpm teardown\n',
 );

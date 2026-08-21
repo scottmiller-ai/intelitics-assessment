@@ -13,17 +13,28 @@ pnpm bootstrap
 ```
 
 `bootstrap` installs the locked dependencies, creates `.env` if needed, starts
-Postgres, bootstraps roles and RLS, applies migrations, and ingests the fixture.
+Postgres, bootstraps roles and RLS, and applies migrations. It does not ingest.
 Before making changes it verifies the required tools, Docker daemon, Postgres
 port `5432`, and configured database environment. Postgres conflicts fail with
-commands to identify the listener. It is safe to run again; an
-already-successful source is skipped.
+commands to identify the listener. It is safe to run again.
 
-Start the API on `127.0.0.1:3000`:
+Start the API on `127.0.0.1:3000`, then load sources yourself:
 
 ```sh
 pnpm dev
 ```
+
+In another terminal:
+
+```sh
+pnpm ingest -- data/fixtures/usage_events.json
+pnpm ingest -- data/fixtures/synthetic_usage.json
+```
+
+The assessment fixture reports `417 accepted / 16 duplicate / 9 rejected`.
+The synthetic August dump is a second source (`cust_101`–`cust_108`) so ingest
+is a visible demo step after launch. An identical file is skipped by content
+hash.
 
 If local infrastructure is not running, use the explicitly mutating shortcut:
 
@@ -34,6 +45,8 @@ pnpm dev:up
 The API port is configurable with `PORT` in `.env`. `predev` checks that the
 configured address is available and reports how to identify a conflicting
 listener before Fastify starts.
+
+Interactive API docs: [http://127.0.0.1:3000/docs](http://127.0.0.1:3000/docs).
 
 ## Verification
 
@@ -72,7 +85,9 @@ pnpm start
 
 ## Golden requests
 
-All billing windows are UTC half-open intervals `[from, to)`.
+All billing windows are UTC half-open intervals `[from, to)`. Load the
+assessment fixture before these July curls. The synthetic dump is August
+`cust_101`–`cust_108` and does not change these goldens.
 
 ```sh
 curl -sS \
@@ -105,10 +120,20 @@ cp -n .env.example .env
 pnpm db:bootstrap
 pnpm db:migrate
 pnpm ingest -- data/fixtures/usage_events.json
+pnpm ingest -- data/fixtures/synthetic_usage.json
 ```
 
-The first fixture ingest reports `417 accepted / 16 duplicate / 9 rejected`.
+The first assessment-fixture ingest reports `417 accepted / 16 duplicate / 9 rejected`.
+The synthetic dump reports `241 accepted / 8 duplicate / 2 rejected`.
 An identical source is skipped by its content hash.
+
+After the synthetic source:
+
+```sh
+curl -sS \
+  -H 'X-Customer-Id: cust_101' \
+  'http://127.0.0.1:3000/customers/cust_101/usage?from=2026-08-01T00:00:00Z&to=2026-09-01T00:00:00Z'
+```
 
 ## Teardown
 

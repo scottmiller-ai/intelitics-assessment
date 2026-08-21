@@ -8,6 +8,7 @@ export default defineConfig({
           name: 'unit',
           include: ['src/tests/**/*.unit.test.ts'],
           environment: 'node',
+          env: { LOG_LEVEL: 'silent' },
         },
       },
       {

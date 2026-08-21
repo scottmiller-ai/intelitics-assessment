@@ -1,0 +1,3012 @@
+[
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-01T00:00:00Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-02T01:07:13Z",
+    "metadata": {
+      "duration_ms": 107,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-03T02:14:26Z",
+    "metadata": {
+      "duration_ms": 124,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-04T03:21:39Z",
+    "metadata": {
+      "duration_ms": 141,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-05T04:28:52Z",
+    "metadata": {
+      "duration_ms": 158,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-06T05:35:05Z",
+    "metadata": {
+      "duration_ms": 175,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-07T06:42:18Z",
+    "metadata": {
+      "duration_ms": 192,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-08T07:49:31Z",
+    "metadata": {
+      "duration_ms": 209,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-09T08:56:44Z",
+    "metadata": {
+      "duration_ms": 226,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-10T09:03:57Z",
+    "metadata": {
+      "duration_ms": 243,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-11T10:10:10Z",
+    "metadata": {
+      "duration_ms": 260,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-12T11:17:23Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-13T12:24:36Z",
+    "metadata": {
+      "duration_ms": 294,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-14T13:31:49Z",
+    "metadata": {
+      "duration_ms": 311,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-15T14:38:02Z",
+    "metadata": {
+      "duration_ms": 328,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-16T15:45:15Z",
+    "metadata": {
+      "duration_ms": 345,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-17T16:52:28Z",
+    "metadata": {
+      "duration_ms": 362,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-18T17:59:41Z",
+    "metadata": {
+      "duration_ms": 379,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-19T18:06:54Z",
+    "metadata": {
+      "duration_ms": 396,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-20T19:13:07Z",
+    "metadata": {
+      "duration_ms": 413,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-21T20:20:20Z",
+    "metadata": {
+      "duration_ms": 430,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-22T21:27:33Z",
+    "metadata": {
+      "duration_ms": 447,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-23T22:34:46Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-24T23:41:59Z",
+    "metadata": {
+      "duration_ms": 481,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-25T00:48:12Z",
+    "metadata": {
+      "duration_ms": 498,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-26T01:55:25Z",
+    "metadata": {
+      "duration_ms": 515,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-27T02:02:38Z",
+    "metadata": {
+      "duration_ms": 532,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-28T03:09:51Z",
+    "metadata": {
+      "duration_ms": 549,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-01T04:16:04Z",
+    "metadata": {
+      "duration_ms": 566,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-02T05:23:17Z",
+    "metadata": {
+      "duration_ms": 583,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-03T06:30:30Z",
+    "metadata": {
+      "duration_ms": 600,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-04T07:37:43Z",
+    "metadata": {
+      "duration_ms": 617,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-05T08:44:56Z",
+    "metadata": {
+      "duration_ms": 634,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-06T09:51:09Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-07T10:58:22Z",
+    "metadata": {
+      "duration_ms": 668,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-08T11:05:35Z",
+    "metadata": {
+      "duration_ms": 685,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-09T12:12:48Z",
+    "metadata": {
+      "duration_ms": 702,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-10T13:19:01Z",
+    "metadata": {
+      "duration_ms": 719,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-11T14:26:14Z",
+    "metadata": {
+      "duration_ms": 736,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-12T15:33:27Z",
+    "metadata": {
+      "duration_ms": 753,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-13T16:40:40Z",
+    "metadata": {
+      "duration_ms": 770,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-14T17:47:53Z",
+    "metadata": {
+      "duration_ms": 787,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-15T18:54:06Z",
+    "metadata": {
+      "duration_ms": 804,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-16T19:01:19Z",
+    "metadata": {
+      "duration_ms": 821,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-17T20:08:32Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-18T21:15:45Z",
+    "metadata": {
+      "duration_ms": 855,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-19T22:22:58Z",
+    "metadata": {
+      "duration_ms": 872,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-20T23:29:11Z",
+    "metadata": {
+      "duration_ms": 889,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-21T00:36:24Z",
+    "metadata": {
+      "duration_ms": 906,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-22T01:43:37Z",
+    "metadata": {
+      "duration_ms": 923,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-23T02:50:50Z",
+    "metadata": {
+      "duration_ms": 940,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-24T03:57:03Z",
+    "metadata": {
+      "duration_ms": 957,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-25T04:04:16Z",
+    "metadata": {
+      "duration_ms": 974,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-26T05:11:29Z",
+    "metadata": {
+      "duration_ms": 991,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-27T06:18:42Z",
+    "metadata": {
+      "duration_ms": 1008,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-28T07:25:55Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-01T08:32:08Z",
+    "metadata": {
+      "duration_ms": 1042,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-02T09:39:21Z",
+    "metadata": {
+      "duration_ms": 1059,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-03T10:46:34Z",
+    "metadata": {
+      "duration_ms": 1076,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-04T11:53:47Z",
+    "metadata": {
+      "duration_ms": 1093,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-05T12:00:00Z",
+    "metadata": {
+      "duration_ms": 1110,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-06T13:07:13Z",
+    "metadata": {
+      "duration_ms": 1127,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-07T14:14:26Z",
+    "metadata": {
+      "duration_ms": 1144,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-08T15:21:39Z",
+    "metadata": {
+      "duration_ms": 1161,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-09T16:28:52Z",
+    "metadata": {
+      "duration_ms": 1178,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-10T17:35:05Z",
+    "metadata": {
+      "duration_ms": 1195,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-11T18:42:18Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-12T19:49:31Z",
+    "metadata": {
+      "duration_ms": 1229,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-13T20:56:44Z",
+    "metadata": {
+      "duration_ms": 1246,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-14T21:03:57Z",
+    "metadata": {
+      "duration_ms": 1263,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-15T22:10:10Z",
+    "metadata": {
+      "duration_ms": 1280,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-16T23:17:23Z",
+    "metadata": {
+      "duration_ms": 1297,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-17T00:24:36Z",
+    "metadata": {
+      "duration_ms": 1314,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-18T01:31:49Z",
+    "metadata": {
+      "duration_ms": 1331,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-19T02:38:02Z",
+    "metadata": {
+      "duration_ms": 1348,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-20T03:45:15Z",
+    "metadata": {
+      "duration_ms": 1365,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-21T04:52:28Z",
+    "metadata": {
+      "duration_ms": 1382,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-22T05:59:41Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-23T06:06:54Z",
+    "metadata": {
+      "duration_ms": 1416,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-24T07:13:07Z",
+    "metadata": {
+      "duration_ms": 1433,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-25T08:20:20Z",
+    "metadata": {
+      "duration_ms": 1450,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-26T09:27:33Z",
+    "metadata": {
+      "duration_ms": 1467,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-27T10:34:46Z",
+    "metadata": {
+      "duration_ms": 1484,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-28T11:41:59Z",
+    "metadata": {
+      "duration_ms": 1501,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-01T12:48:12Z",
+    "metadata": {
+      "duration_ms": 1518,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-02T13:55:25Z",
+    "metadata": {
+      "duration_ms": 1535,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-03T14:02:38Z",
+    "metadata": {
+      "duration_ms": 1552,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-04T15:09:51Z",
+    "metadata": {
+      "duration_ms": 1569,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-05T16:16:04Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-06T17:23:17Z",
+    "metadata": {
+      "duration_ms": 1603,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-07T18:30:30Z",
+    "metadata": {
+      "duration_ms": 1620,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-08T19:37:43Z",
+    "metadata": {
+      "duration_ms": 1637,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-09T20:44:56Z",
+    "metadata": {
+      "duration_ms": 1654,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-10T21:51:09Z",
+    "metadata": {
+      "duration_ms": 1671,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-11T22:58:22Z",
+    "metadata": {
+      "duration_ms": 1688,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-12T23:05:35Z",
+    "metadata": {
+      "duration_ms": 1705,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-13T00:12:48Z",
+    "metadata": {
+      "duration_ms": 1722,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-14T01:19:01Z",
+    "metadata": {
+      "duration_ms": 1739,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-15T02:26:14Z",
+    "metadata": {
+      "duration_ms": 1756,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-16T03:33:27Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-17T04:40:40Z",
+    "metadata": {
+      "duration_ms": 1790,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-18T05:47:53Z",
+    "metadata": {
+      "duration_ms": 1807,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-19T06:54:06Z",
+    "metadata": {
+      "duration_ms": 1824,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-20T07:01:19Z",
+    "metadata": {
+      "duration_ms": 1841,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-21T08:08:32Z",
+    "metadata": {
+      "duration_ms": 1858,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-22T09:15:45Z",
+    "metadata": {
+      "duration_ms": 1875,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-23T10:22:58Z",
+    "metadata": {
+      "duration_ms": 1892,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-24T11:29:11Z",
+    "metadata": {
+      "duration_ms": 1909,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-25T12:36:24Z",
+    "metadata": {
+      "duration_ms": 1926,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-26T13:43:37Z",
+    "metadata": {
+      "duration_ms": 1943,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-27T14:50:50Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-28T15:57:03Z",
+    "metadata": {
+      "duration_ms": 1977,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-01T16:04:16Z",
+    "metadata": {
+      "duration_ms": 1994,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-02T17:11:29Z",
+    "metadata": {
+      "duration_ms": 2011,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-03T18:18:42Z",
+    "metadata": {
+      "duration_ms": 2028,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-04T19:25:55Z",
+    "metadata": {
+      "duration_ms": 2045,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-05T20:32:08Z",
+    "metadata": {
+      "duration_ms": 2062,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-06T21:39:21Z",
+    "metadata": {
+      "duration_ms": 2079,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-07T22:46:34Z",
+    "metadata": {
+      "duration_ms": 2096,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-08T23:53:47Z",
+    "metadata": {
+      "duration_ms": 2113,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-09T00:00:00Z",
+    "metadata": {
+      "duration_ms": 2130,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-10T01:07:13Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-11T02:14:26Z",
+    "metadata": {
+      "duration_ms": 2164,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-12T03:21:39Z",
+    "metadata": {
+      "duration_ms": 2181,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-13T04:28:52Z",
+    "metadata": {
+      "duration_ms": 2198,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-14T05:35:05Z",
+    "metadata": {
+      "duration_ms": 2215,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-15T06:42:18Z",
+    "metadata": {
+      "duration_ms": 2232,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-16T07:49:31Z",
+    "metadata": {
+      "duration_ms": 2249,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-17T08:56:44Z",
+    "metadata": {
+      "duration_ms": 2266,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-18T09:03:57Z",
+    "metadata": {
+      "duration_ms": 2283,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-19T10:10:10Z",
+    "metadata": {
+      "duration_ms": 2300,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-20T11:17:23Z",
+    "metadata": {
+      "duration_ms": 2317,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-21T12:24:36Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-22T13:31:49Z",
+    "metadata": {
+      "duration_ms": 2351,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-23T14:38:02Z",
+    "metadata": {
+      "duration_ms": 2368,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-24T15:45:15Z",
+    "metadata": {
+      "duration_ms": 2385,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-25T16:52:28Z",
+    "metadata": {
+      "duration_ms": 2402,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-26T17:59:41Z",
+    "metadata": {
+      "duration_ms": 2419,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-27T18:06:54Z",
+    "metadata": {
+      "duration_ms": 2436,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-28T19:13:07Z",
+    "metadata": {
+      "duration_ms": 2453,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-01T20:20:20Z",
+    "metadata": {
+      "duration_ms": 2470,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-02T21:27:33Z",
+    "metadata": {
+      "duration_ms": 2487,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-03T22:34:46Z",
+    "metadata": {
+      "duration_ms": 2504,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-04T23:41:59Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-05T00:48:12Z",
+    "metadata": {
+      "duration_ms": 2538,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-06T01:55:25Z",
+    "metadata": {
+      "duration_ms": 2555,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-07T02:02:38Z",
+    "metadata": {
+      "duration_ms": 2572,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-08T03:09:51Z",
+    "metadata": {
+      "duration_ms": 2589,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-09T04:16:04Z",
+    "metadata": {
+      "duration_ms": 2606,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-10T05:23:17Z",
+    "metadata": {
+      "duration_ms": 2623,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-11T06:30:30Z",
+    "metadata": {
+      "duration_ms": 2640,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-12T07:37:43Z",
+    "metadata": {
+      "duration_ms": 2657,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-13T08:44:56Z",
+    "metadata": {
+      "duration_ms": 2674,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-14T09:51:09Z",
+    "metadata": {
+      "duration_ms": 2691,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-15T10:58:22Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-16T11:05:35Z",
+    "metadata": {
+      "duration_ms": 2725,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-17T12:12:48Z",
+    "metadata": {
+      "duration_ms": 2742,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-18T13:19:01Z",
+    "metadata": {
+      "duration_ms": 2759,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-19T14:26:14Z",
+    "metadata": {
+      "duration_ms": 2776,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-20T15:33:27Z",
+    "metadata": {
+      "duration_ms": 2793,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-21T16:40:40Z",
+    "metadata": {
+      "duration_ms": 2810,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-22T17:47:53Z",
+    "metadata": {
+      "duration_ms": 2827,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-23T18:54:06Z",
+    "metadata": {
+      "duration_ms": 2844,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-24T19:01:19Z",
+    "metadata": {
+      "duration_ms": 2861,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-25T20:08:32Z",
+    "metadata": {
+      "duration_ms": 2878,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-26T21:15:45Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-27T22:22:58Z",
+    "metadata": {
+      "duration_ms": 2912,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-28T23:29:11Z",
+    "metadata": {
+      "duration_ms": 2929,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-01T00:36:24Z",
+    "metadata": {
+      "duration_ms": 2946,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-02T01:43:37Z",
+    "metadata": {
+      "duration_ms": 2963,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-03T02:50:50Z",
+    "metadata": {
+      "duration_ms": 2980,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-04T03:57:03Z",
+    "metadata": {
+      "duration_ms": 2997,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-05T04:04:16Z",
+    "metadata": {
+      "duration_ms": 3014,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-06T05:11:29Z",
+    "metadata": {
+      "duration_ms": 3031,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-07T06:18:42Z",
+    "metadata": {
+      "duration_ms": 3048,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-08T07:25:55Z",
+    "metadata": {
+      "duration_ms": 3065,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-09T08:32:08Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-10T09:39:21Z",
+    "metadata": {
+      "duration_ms": 3099,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-11T10:46:34Z",
+    "metadata": {
+      "duration_ms": 3116,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-12T11:53:47Z",
+    "metadata": {
+      "duration_ms": 3133,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-13T12:00:00Z",
+    "metadata": {
+      "duration_ms": 3150,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-14T13:07:13Z",
+    "metadata": {
+      "duration_ms": 3167,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-15T14:14:26Z",
+    "metadata": {
+      "duration_ms": 3184,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-16T15:21:39Z",
+    "metadata": {
+      "duration_ms": 3201,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-17T16:28:52Z",
+    "metadata": {
+      "duration_ms": 3218,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-18T17:35:05Z",
+    "metadata": {
+      "duration_ms": 3235,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-19T18:42:18Z",
+    "metadata": {
+      "duration_ms": 3252,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-20T19:49:31Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-21T20:56:44Z",
+    "metadata": {
+      "duration_ms": 3286,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-22T21:03:57Z",
+    "metadata": {
+      "duration_ms": 3303,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-23T22:10:10Z",
+    "metadata": {
+      "duration_ms": 3320,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-24T23:17:23Z",
+    "metadata": {
+      "duration_ms": 3337,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-25T00:24:36Z",
+    "metadata": {
+      "duration_ms": 3354,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-26T01:31:49Z",
+    "metadata": {
+      "duration_ms": 3371,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-27T02:38:02Z",
+    "metadata": {
+      "duration_ms": 3388,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-28T03:45:15Z",
+    "metadata": {
+      "duration_ms": 3405,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-01T04:52:28Z",
+    "metadata": {
+      "duration_ms": 3422,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-02T05:59:41Z",
+    "metadata": {
+      "duration_ms": 3439,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-03T06:06:54Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-04T07:13:07Z",
+    "metadata": {
+      "duration_ms": 3473,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-05T08:20:20Z",
+    "metadata": {
+      "duration_ms": 3490,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-06T09:27:33Z",
+    "metadata": {
+      "duration_ms": 3507,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-07T10:34:46Z",
+    "metadata": {
+      "duration_ms": 3524,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-08T11:41:59Z",
+    "metadata": {
+      "duration_ms": 3541,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-09T12:48:12Z",
+    "metadata": {
+      "duration_ms": 3558,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-10T13:55:25Z",
+    "metadata": {
+      "duration_ms": 3575,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-11T14:02:38Z",
+    "metadata": {
+      "duration_ms": 3592,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-12T15:09:51Z",
+    "metadata": {
+      "duration_ms": 3609,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-13T16:16:04Z",
+    "metadata": {
+      "duration_ms": 3626,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-14T17:23:17Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-15T18:30:30Z",
+    "metadata": {
+      "duration_ms": 3660,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-16T19:37:43Z",
+    "metadata": {
+      "duration_ms": 3677,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-17T20:44:56Z",
+    "metadata": {
+      "duration_ms": 3694,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-18T21:51:09Z",
+    "metadata": {
+      "duration_ms": 3711,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-19T22:58:22Z",
+    "metadata": {
+      "duration_ms": 3728,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-20T23:05:35Z",
+    "metadata": {
+      "duration_ms": 3745,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-21T00:12:48Z",
+    "metadata": {
+      "duration_ms": 3762,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-22T01:19:01Z",
+    "metadata": {
+      "duration_ms": 3779,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-23T02:26:14Z",
+    "metadata": {
+      "duration_ms": 3796,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-24T03:33:27Z",
+    "metadata": {
+      "duration_ms": 3813,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-25T04:40:40Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-26T05:47:53Z",
+    "metadata": {
+      "duration_ms": 3847,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-27T06:54:06Z",
+    "metadata": {
+      "duration_ms": 3864,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-28T07:01:19Z",
+    "metadata": {
+      "duration_ms": 3881,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-01T08:08:32Z",
+    "metadata": {
+      "duration_ms": 98,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-02T09:15:45Z",
+    "metadata": {
+      "duration_ms": 115,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-03T10:22:58Z",
+    "metadata": {
+      "duration_ms": 132,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-04T11:29:11Z",
+    "metadata": {
+      "duration_ms": 149,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-05T12:36:24Z",
+    "metadata": {
+      "duration_ms": 166,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-06T13:43:37Z",
+    "metadata": {
+      "duration_ms": 183,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-07T14:50:50Z",
+    "metadata": {
+      "duration_ms": 200,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-08T15:57:03Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-09T16:04:16Z",
+    "metadata": {
+      "duration_ms": 234,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-10T17:11:29Z",
+    "metadata": {
+      "duration_ms": 251,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-11T18:18:42Z",
+    "metadata": {
+      "duration_ms": 268,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-12T19:25:55Z",
+    "metadata": {
+      "duration_ms": 285,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-13T20:32:08Z",
+    "metadata": {
+      "duration_ms": 302,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-14T21:39:21Z",
+    "metadata": {
+      "duration_ms": 319,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-15T22:46:34Z",
+    "metadata": {
+      "duration_ms": 336,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-16T23:53:47Z",
+    "metadata": {
+      "duration_ms": 353,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-01T00:00:00Z",
+    "metadata": {
+      "duration_ms": "214ms",
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_102",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "noah@lumenpath.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-02T01:07:13Z",
+    "metadata": {
+      "duration_ms": 107,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_103",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "mia@copperline.co",
+    "plan": "free",
+    "occurred_at": "2026-08-03T02:14:26Z",
+    "metadata": {
+      "duration_ms": 124,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_104",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "eli@northstack.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-04T03:21:39Z",
+    "metadata": {
+      "duration_ms": 141,
+      "status": "timeout"
+    }
+  },
+  {
+    "customer_id": "cust_105",
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "zoe@fieldglass.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-05T04:28:52Z",
+    "metadata": {
+      "duration_ms": 158,
+      "status": "error"
+    }
+  },
+  {
+    "customer_id": "cust_106",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "kai@papertrail.co",
+    "plan": "pro",
+    "occurred_at": "2026-08-06T05:35:05Z",
+    "metadata": {
+      "duration_ms": 175,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_107",
+    "event_type": "export",
+    "endpoint": "/v1/users/invite",
+    "user_email": "rue@harborlight.io",
+    "plan": "free",
+    "occurred_at": "2026-08-07T06:42:18Z",
+    "metadata": {
+      "duration_ms": 192,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_108",
+    "event_type": "report_generated",
+    "endpoint": "/v1/exports/csv",
+    "user_email": "jan@summitgrid.com",
+    "plan": "enterprise",
+    "occurred_at": "2026-08-08T07:49:31Z",
+    "metadata": {
+      "duration_ms": 209,
+      "status": "success"
+    }
+  },
+  {
+    "event_type": "login",
+    "endpoint": "/v1/login",
+    "user_email": "ghost@example.com",
+    "plan": "free",
+    "occurred_at": "2026-08-03T12:00:00Z",
+    "metadata": {
+      "duration_ms": 120,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "08/03/2026 12:00pm",
+    "metadata": {
+      "duration_ms": 120,
+      "status": "success"
+    }
+  },
+  {
+    "customer_id": "cust_101",
+    "event_type": "api_call",
+    "endpoint": "/v1/reports/generate",
+    "user_email": "ava@riverbank.io",
+    "plan": "pro",
+    "occurred_at": "2026-08-03T12:00:00Z",
+    "metadata": {
+      "duration_ms": 120
+    }
+  }
+]

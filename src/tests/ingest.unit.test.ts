@@ -2,6 +2,7 @@ import { readFile } from 'node:fs/promises';
 
 import { describe, expect, it } from 'vitest';
 
+import { parseIngestInvocation } from '../ingest/cliArgs.js';
 import {
   canonicalJson,
   normalizeEvent,
@@ -191,6 +192,31 @@ describe('fixture normalization', () => {
         missing_customer_id: 3,
         missing_occurred_at: 3,
       },
+    });
+  });
+});
+
+describe('ingest CLI args', () => {
+  it('prints help for common flags', () => {
+    expect(parseIngestInvocation(['--help'])).toEqual({ kind: 'help' });
+    expect(parseIngestInvocation(['-h'])).toEqual({ kind: 'help' });
+    expect(parseIngestInvocation(['help'])).toEqual({ kind: 'help' });
+    expect(parseIngestInvocation(['--', '--help'])).toEqual({ kind: 'help' });
+  });
+
+  it('takes a single path after pnpm double-dash', () => {
+    expect(
+      parseIngestInvocation(['--', 'data/fixtures/usage_events.json']),
+    ).toEqual({
+      kind: 'path',
+      sourcePath: 'data/fixtures/usage_events.json',
+    });
+  });
+
+  it('rejects missing or extra args', () => {
+    expect(parseIngestInvocation([])).toEqual({ kind: 'usage' });
+    expect(parseIngestInvocation(['a.json', 'b.json'])).toEqual({
+      kind: 'usage',
     });
   });
 });

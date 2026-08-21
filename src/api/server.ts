@@ -7,19 +7,19 @@ import {
   createTenantClient,
   type DatabaseClient,
 } from '../db/client.js';
+import { registerDocs } from './docs.js';
+import { registerErrorHandler } from './errors.js';
+import { registerHealthRoute } from './routes/health.js';
 import { registerUsageRoutes, type UsageRouteClients } from './routes/usage.js';
-import { RequestValidationError } from './validation.js';
-
-interface CodedError extends Error {
-  statusCode?: number;
-  code?: string;
-}
 
 export async function buildServer(
   suppliedClients?: UsageRouteClients,
 ): Promise<FastifyInstance> {
   const app = Fastify({
     logger: { level: process.env.LOG_LEVEL ?? 'info' },
+    // Fastify strips unknown properties by default. A billing window is worth
+    // rejecting outright: a typo like `form=` must not silently widen the range.
+    ajv: { customOptions: { removeAdditional: false } },
   });
   const ownsClients = suppliedClients === undefined;
   const clients: UsageRouteClients = suppliedClients ?? {
@@ -27,45 +27,9 @@ export async function buildServer(
     billingAdmin: createBillingAdminClient(),
   };
 
-  app.setErrorHandler((error: CodedError, request, reply) => {
-    if (error instanceof RequestValidationError) {
-      void reply
-        .status(400)
-        .send({ error: 'invalid_request', details: error.message });
-      return;
-    }
-    if (error.code && error.statusCode) {
-      void reply
-        .status(error.statusCode)
-        .send({ error: error.code, details: error.message });
-      return;
-    }
-    request.log.error({ err: error }, 'Request failed');
-    void reply
-      .status(500)
-      .send({ error: 'internal_error', details: 'Unexpected failure' });
-  });
-
-  app.get('/health', async (_request, reply) => {
-    try {
-      await Promise.all([
-        clients.tenant.sql.begin(async (transaction) => {
-          await transaction`set local statement_timeout = '2000ms'`;
-          await transaction`select 1 from app.customers limit 1`;
-        }),
-        clients.billingAdmin.sql.begin(async (transaction) => {
-          await transaction`set local statement_timeout = '2000ms'`;
-          await transaction`select 1 from app.usage_events limit 1`;
-        }),
-      ]);
-      return { status: 'ok', database: 'ready' };
-    } catch {
-      return reply
-        .status(503)
-        .send({ status: 'unavailable', database: 'unavailable' });
-    }
-  });
-
+  registerErrorHandler(app);
+  await registerDocs(app);
+  registerHealthRoute(app, clients);
   registerUsageRoutes(app, clients);
 
   if (ownsClients) {

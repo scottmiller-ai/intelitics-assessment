@@ -260,6 +260,13 @@ describe('live usage API', () => {
         headers: { 'x-admin': 'true' },
       });
       expect(top.json()).toEqual(goldenTopCustomers);
+
+      const docs = await app.inject({ url: '/docs' });
+      expect(docs.statusCode).toBe(200);
+      const spec = await app.inject({ url: '/docs/json' });
+      expect(spec.statusCode).toBe(200);
+      expect(spec.body).toContain('Intelitics usage billing');
+      expect(spec.body).toContain('/customers/{id}/usage');
     } finally {
       await close();
     }
